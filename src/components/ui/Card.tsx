@@ -5,11 +5,12 @@ import { FocusRing } from './FocusRing'
 interface CardProps {
   id: string
   onClick?: () => void
+  compact?: boolean
   className?: string
   children: React.ReactNode
 }
 
-export function Card({ id, onClick, className, children }: CardProps) {
+export function Card({ id, onClick, compact = false, className, children }: CardProps) {
   const { ref, isFocused } = useFocusable<HTMLDivElement>(id)
 
   return (
@@ -20,7 +21,8 @@ export function Card({ id, onClick, className, children }: CardProps) {
         tabIndex={-1}
         onClick={onClick}
         className={cn(
-          'bg-overlay border border-border rounded-tv-lg p-tv-6 shadow-tv-card h-full',
+          'bg-overlay border border-border rounded-tv-lg shadow-tv-card h-full',
+          compact ? 'p-tv-3' : 'p-tv-6',
           className
         )}
       >

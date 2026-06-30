@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        arabic: ['Amiri', 'Traditional Arabic', 'Simplified Arabic', 'Arial', 'serif'],
+        arabic: ['Cairo', 'Noto Naskh Arabic', 'Traditional Arabic', 'Arabic', 'sans-serif'],
       },
       fontSize: {
         'tv-xs': ['1.25rem', { lineHeight: '1.75rem' }],
@@ -15,8 +15,8 @@ const config: Config = {
         'tv-xl': ['3rem', { lineHeight: '3.75rem' }],
         'tv-2xl': ['4rem', { lineHeight: '4.75rem' }],
         'tv-3xl': ['5rem', { lineHeight: '5.75rem' }],
-        // Arabic prayer text — 72px primary display size for classroom viewing
-        'tv-arabic': ['4.5rem', { lineHeight: '2' }],
+        // Arabic prayer text — 96px for classroom TV viewing; Cairo has ~65% optical efficiency
+        'tv-arabic': ['6rem', { lineHeight: '1.6' }],
       },
       spacing: {
         'tv-1': '0.5rem',

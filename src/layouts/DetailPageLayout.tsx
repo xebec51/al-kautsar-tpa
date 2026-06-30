@@ -69,8 +69,8 @@ export function DetailPageLayout({
 
   return (
     <div className="w-full h-full flex flex-col">
-      {/* Header: title + position counter */}
-      <div className="flex items-center justify-between px-[4%] pt-tv-6 pb-tv-3 shrink-0">
+      {/* Header: compact */}
+      <div className="flex items-center justify-between px-[4%] pt-tv-4 pb-tv-2 shrink-0">
         <Typography variant="heading" className="text-text-primary font-bold">
           {title}
         </Typography>
@@ -79,32 +79,41 @@ export function DetailPageLayout({
         </span>
       </div>
 
-      {/* Content: stacked naturally from top */}
-      <div className="flex-1 min-h-0 flex flex-col px-[4%] pb-tv-4 overflow-hidden">
-        {arabicText && <ArabicText text={arabicText} />}
+      {/* Content */}
+      <div className="flex-1 min-h-0 flex flex-col px-[4%]">
+        {arabicText ? (
+          <>
+            {/* Arabic: fills remaining space, text starts at top */}
+            <div className="flex-1 min-h-0 overflow-hidden pt-tv-2">
+              <ArabicText text={arabicText} />
+            </div>
 
-        {latinText && (
-          <p className="mt-tv-3 text-tv-base italic text-text-secondary text-center">
-            {latinText}
-          </p>
-        )}
-
-        {translation && (
-          <p className="mt-tv-2 text-tv-sm text-text-secondary text-center">
-            {translation}
-          </p>
-        )}
-
-        {/* Text-only content (fiqh, akhlak, akidah materials) */}
-        {content && !arabicText && (
-          <p className="mt-tv-2 text-tv-base text-text-primary whitespace-pre-wrap leading-relaxed">
-            {content}
-          </p>
-        )}
+            {/* Latin + Translation: anchored to bottom of content area */}
+            {(latinText || translation) && (
+              <div className="shrink-0 pt-tv-4 pb-tv-4">
+                {latinText && (
+                  <p className="text-tv-lg italic text-text-secondary text-center">{latinText}</p>
+                )}
+                {translation && (
+                  <p className="mt-tv-2 text-tv-base text-text-secondary text-center">
+                    {translation}
+                  </p>
+                )}
+              </div>
+            )}
+          </>
+        ) : content ? (
+          /* Text-only materials (fiqh, akhlak, akidah, tahsin) */
+          <div className="flex-1 min-h-0 overflow-hidden pt-tv-2 pb-tv-4">
+            <p className="text-tv-base text-text-primary whitespace-pre-wrap leading-relaxed">
+              {content}
+            </p>
+          </div>
+        ) : null}
       </div>
 
       {/* Footer: subtle navigation hints */}
-      <div className="flex items-center justify-between px-[4%] pb-tv-6 shrink-0">
+      <div className="flex items-center justify-between px-[4%] pb-tv-4 shrink-0">
         {prevTitle ? (
           <span className="text-tv-sm text-text-muted">↑ {prevTitle}</span>
         ) : (

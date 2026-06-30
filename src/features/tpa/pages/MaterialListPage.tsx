@@ -17,27 +17,26 @@ export function MaterialListPage() {
   const navigate = useNavigate()
 
   return (
-    <Container className="flex flex-col h-full py-tv-8">
-      <div className="flex items-center gap-tv-4 mb-tv-6">
+    <Container className="flex flex-col h-full py-tv-6">
+      <div className="flex items-center gap-tv-4 mb-tv-4">
         <Button id="material-list-back" variant="ghost" onClick={() => navigate('/')}>
           ← Kembali
         </Button>
         <Typography variant="heading">Materi TPA</Typography>
       </div>
 
-      <div className="grid grid-cols-2 gap-tv-3 overflow-hidden">
+      <div className="grid grid-cols-3 gap-tv-3 overflow-hidden">
         {materials.map((material) => (
           <Card
             key={material.id}
             id={`material-${material.id}`}
+            compact
             onClick={() => navigate(`/material/${material.id}`)}
           >
-            <Typography variant="title" className="mb-tv-1">
-              {material.title}
-            </Typography>
-            <Typography variant="label">
+            <p className="text-tv-lg font-semibold text-text-primary mb-tv-1">{material.title}</p>
+            <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
               {CATEGORY_LABELS[material.category] ?? material.category}
-            </Typography>
+            </p>
           </Card>
         ))}
       </div>
