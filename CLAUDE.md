@@ -2,477 +2,190 @@
 
 # Al-Kautsar TPA
 
-## Overview
+## Project Overview
 
-Al-Kautsar TPA is a Smart TV application developed for Islamic education (TPA).
+Al-Kautsar TPA is a Smart TV application for teaching Islamic education (TPA) at Masjid Al-Kautsar.
 
-The application is designed primarily for VIDAA Smart TVs and runs inside the built-in browser.
+The application runs inside the built-in browser of a VIDAA Smart TV and should feel like a native TV application.
 
-Although it runs inside a browser, the browser should be treated as an application runtime.
-
-The final experience should resemble a native Smart TV application.
-
-This application will be deployed in Masjid Al-Kautsar.
-
----
-
-# Vision
-
-Create a professional Smart TV application that helps teachers deliver TPA materials clearly and efficiently.
-
-The application should:
-
-- be easy to use
-- require only the TV remote
-- display readable content from a distance
-- be maintainable
-- be scalable
-- eventually support other mosques
-
----
-
-# Language Policy
-
-This project uses two languages.
-
-## Source Code
-
-English
-
-Including:
-
-- variables
-- functions
-- components
-- folders
-- comments
-- documentation
-
-## User Interface
-
-Indonesian
-
-Everything shown to users must be Indonesian.
-
-Examples:
-
-Beranda
-
-Bacaan Shalat
-
-Doa Harian
-
-Materi TPA
-
-Surat Pendek
-
-Tajwid
-
-Pengaturan
-
-Keluar
-
-Do not mix English into the UI.
-
----
-
-# Target Platform
-
-Primary
-
-VIDAA Smart TV Browser
-
-Future
-
-Android TV
-
-Google TV
-
-Desktop Browser
-
-Tablet
-
-Mobile
-
-Every architectural decision should prioritize Smart TV.
+The teacher controls the application using only the Smart TV remote.
 
 ---
 
 # Core Principles
 
-This is NOT a traditional website.
+- Keep the project simple.
+- Avoid over-engineering.
+- Implement only what is currently needed.
+- Prefer reusable components.
+- Prioritize readability over visual decoration.
+- Optimize for Smart TV first, desktop second.
+
+---
+
+# Technology
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS v3
+- React Router
+
+Store application content in JSON files.
+
+---
+
+# User Interface
+
+Everything visible to users must be written in **Bahasa Indonesia**.
+
+Source code, folder names, variables, comments, and Git commits use **English**.
+
+---
+
+# Smart TV Design Rules
+
+This is **not** a website.
 
 This is a Smart TV application.
 
-Everything should prioritize TV usability.
-
----
-
-# TV UX
-
-Always use:
-
-Large fonts
-
-Large buttons
-
-High contrast
-
-Simple layouts
-
-Comfortable spacing
-
-Fullscreen interface
-
-Visible focus
-
-No tiny controls
-
-No hover interaction
-
-No mouse dependency
-
----
-
-# Remote Navigation
-
-Primary input:
-
-TV Remote
-
-Supported keys:
-
-ArrowUp
-
-ArrowDown
-
-ArrowLeft
-
-ArrowRight
-
-Enter
-
-Escape
-
-Back
-
-Never rely on mouse.
-
-Implement a custom Focus Manager.
-
----
-
-# Tech Stack
-
-Frontend
-
-React
-
-Vite
-
-TypeScript
-
-Tailwind CSS
-
-Routing
-
-React Router
-
-Animation
-
-Framer Motion
-
-Backend (future)
-
-Firebase
-
-Realtime
-
-Firestore
-
-WebSocket
-
-Deployment
-
-Vercel
-
----
-
-# Architecture
-
-Use Feature-Based Architecture.
-
-Example
-
-src/
-
-assets/
-
-components/
-
-features/
-
-prayer/
-
-dua/
-
-tajwid/
-
-presenter/
-
-settings/
-
-navigation/
-
-hooks/
-
-layouts/
-
-pages/
-
-services/
-
-styles/
-
-types/
-
-utils/
-
----
-
-# Code Quality
-
-Always use:
-
-Strict TypeScript
-
-Functional Components
-
-Hooks
-
-Reusable Components
-
-Composition
+Always prioritize:
+
+- fullscreen layout
+- dark theme
+- high contrast
+- large typography
+- simple navigation
+- comfortable reading from several meters away
 
 Avoid:
 
-any
-
-duplicated logic
-
-large files
-
-deep nesting
+- tiny text
+- hover interactions
+- complicated menus
+- unnecessary dialogs
+- unnecessary animations
 
 ---
 
-# Styling
+# Prayer Screen
 
-Use Tailwind CSS.
+Each prayer is displayed on a single screen.
 
-Never use inline styles unless necessary.
+Display:
 
-Maintain visual consistency.
+- Judul
+- Arab
+- Latin
+- Arti Bahasa Indonesia
 
----
+Arabic is always the primary visual focus.
 
-# Performance
+Do not split Arabic, Latin, and translation into different pages.
 
-Optimize for Smart TVs.
+Use approximately 85–90% of the screen width.
 
-Reduce JavaScript bundle size.
+Avoid excessive empty space.
 
-Avoid unnecessary rerenders.
-
-Lazy load pages when appropriate.
-
----
-
-# Accessibility
-
-Maintain:
-
-Semantic HTML
-
-Keyboard navigation
-
-Visible focus
-
-Proper ARIA labels
+Do not vertically center educational content.
 
 ---
 
-# Data Strategy
+# Navigation
 
-Development
+The Smart TV remote is the only input device.
 
-Use JSON files.
+Supported keys:
 
-Production
+- ArrowUp
+- ArrowDown
+- ArrowLeft
+- ArrowRight
+- Enter
+- Escape / Back
 
-Use Firebase.
+Use DOMRect-based spatial navigation.
 
-Never hardcode application content inside components.
-
----
-
-# Development Workflow
-
-For every task:
-
-Explain architecture.
-
-Explain reasoning.
-
-List files.
-
-Generate code.
-
-Explain implementation.
-
-Suggest improvements.
+Do not depend on browser tab order.
 
 ---
 
-# Milestones
+# Project Structure
 
-Milestone 1
+Use feature-based architecture.
 
-Project setup
+Example:
 
-Tailwind
-
-TypeScript
-
-Routing
-
-Theme
-
-Layout
-
-Focus Manager
-
-TV Navigation
-
-Milestone 2
-
-Home Screen
-
-Milestone 3
-
-Prayer Module
-
-Milestone 4
-
-Daily Dua
-
-Milestone 5
-
-Short Surah
-
-Milestone 6
-
-Tajwid
-
-Milestone 7
-
-Presenter Mode
-
-Milestone 8
-
-Admin Dashboard
-
-Milestone 9
-
-Firebase
-
-Milestone 10
-
-Realtime Synchronization
-
-Milestone 11
-
-Offline Support
+src/
+  components/
+  features/
+    prayer/
+    dua/
+    tpa/
+    settings/
+  hooks/
+  layouts/
+  navigation/
+  pages/
+  styles/
+  utils/
 
 ---
 
-# Git Convention
+# Roadmap
 
-Use Conventional Commits.
-
-Examples
-
-feat:
-
-fix:
-
-docs:
-
-refactor:
-
-style:
-
-test:
-
-chore:
+1. Project Foundation
+2. TV Navigation Engine
+3. Prayer Module
+4. Daily Dua
+5. TPA Materials
+6. Settings
+7. JSON Content Management
+8. Polish & Production
 
 ---
 
 # Non Goals
 
-This project is NOT:
+Do not implement unless explicitly requested:
 
-- desktop-first
-- mobile-first
-- Android application
-
-The Smart TV experience always comes first.
-
----
-
-# UI Rules
-
-Every visible text must be Indonesian.
-
-Examples:
-
-Beranda
-
-Bacaan Shalat
-
-Doa Harian
-
-Materi TPA
-
-Tajwid
-
-Surat Pendek
-
-Pengaturan
-
-Mode Presentasi
-
-Keluar
-
-Never use English for user-facing content.
-
----
-
-# Long-Term Goal
-
-Build a production-ready Smart TV application for Masjid Al-Kautsar.
-
-The application should eventually support:
-
-- Bacaan Shalat
-- Doa Harian
-- Materi TPA
-- Surat Pendek
-- Tajwid
 - Presenter Mode
-- Dashboard Admin
-- Realtime Synchronization
-- Multiple Smart TVs
-- Offline Mode
+- Companion apps
+- Multi-device synchronization
+- WebSocket
+- Firebase Realtime
+- Complex dashboards
 
-Design every feature with long-term maintainability in mind.
+---
+
+# Development Workflow
+
+For every milestone:
+
+1. Briefly explain the implementation plan.
+2. Implement completely.
+3. Run TypeScript.
+4. Run ESLint.
+5. Run production build.
+6. Fix issues automatically.
+7. Perform a short self-review.
+
+Do not ask for confirmation between these steps.
+
+Leave the repository in a clean, production-ready state.
+
+## Finalization Rule
+
+Unless explicitly instructed otherwise, every milestone must be considered complete before stopping.
+
+Before finishing:
+
+- review the implementation,
+- simplify unnecessary code,
+- fix inconsistencies,
+- remove dead code,
+- verify TypeScript,
+- verify ESLint,
+- verify production build.
+
+Do not leave partially implemented features.

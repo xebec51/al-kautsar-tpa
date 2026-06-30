@@ -1,6 +1,5 @@
 import { cn } from '@/lib/cn'
 import { useKeyboard } from '@/navigation/useKeyboard'
-import { FocusDebugOverlay } from '@/components/debug/FocusDebugOverlay'
 
 interface TVLayoutProps {
   onBack?: () => void
@@ -19,7 +18,6 @@ export function TVLayout({ onBack, className, children }: TVLayoutProps) {
       )}
     >
       {children}
-      {import.meta.env.DEV && <FocusDebugOverlay />}
     </div>
   )
 }

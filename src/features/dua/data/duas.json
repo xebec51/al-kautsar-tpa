@@ -1,0 +1,98 @@
+[
+  {
+    "id": "sebelum-makan",
+    "title": "Doa Sebelum Makan",
+    "arabicText": "بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ",
+    "latinText": "Bismillaahi wa 'alaa barakatillaah",
+    "translation": "Dengan menyebut nama Allah dan atas berkah Allah",
+    "category": "makan"
+  },
+  {
+    "id": "sesudah-makan",
+    "title": "Doa Sesudah Makan",
+    "arabicText": "اَلْحَمْدُ لِلَّهِ الَّذِيْ أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِيْنَ",
+    "latinText": "Alhamdu lillaahil ladzii ath'amanaa wa saqaanaa wa ja'alanaa minal muslimiin",
+    "translation": "Segala puji bagi Allah yang telah memberi kami makan dan minum, serta menjadikan kami termasuk orang-orang Islam",
+    "category": "makan"
+  },
+  {
+    "id": "sebelum-tidur",
+    "title": "Doa Sebelum Tidur",
+    "arabicText": "بِسْمِكَ اللَّهُمَّ أَحْيَا وَبِسْمِكَ أَمُوتُ",
+    "latinText": "Bismikallahumma ahyaa wa bismika amuut",
+    "translation": "Dengan nama-Mu ya Allah aku hidup dan dengan nama-Mu aku mati",
+    "category": "tidur"
+  },
+  {
+    "id": "bangun-tidur",
+    "title": "Doa Bangun Tidur",
+    "arabicText": "اَلْحَمْدُ لِلَّهِ الَّذِيْ أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ",
+    "latinText": "Alhamdu lillaahil ladzii ahyaanaa ba'da maa amaatanaa wa ilaihin nusyuur",
+    "translation": "Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami, dan kepada-Nya kami akan kembali",
+    "category": "tidur"
+  },
+  {
+    "id": "masuk-rumah",
+    "title": "Doa Masuk Rumah",
+    "arabicText": "بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+    "latinText": "Bismillaahi walajna wa bismillaahi khorojna wa 'alalloohi robbinaa tawakkalnaa",
+    "translation": "Dengan nama Allah kami masuk dan dengan nama Allah kami keluar, dan kepada Allah Tuhan kami kami bertawakal",
+    "category": "rumah"
+  },
+  {
+    "id": "keluar-rumah",
+    "title": "Doa Keluar Rumah",
+    "arabicText": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+    "latinText": "Bismillaahi tawakkaltu 'alallaahi wa laa hawla wa laa quwwata illaa billaah",
+    "translation": "Dengan nama Allah, aku bertawakal kepada Allah. Tiada daya dan tiada kekuatan melainkan dengan pertolongan Allah",
+    "category": "rumah"
+  },
+  {
+    "id": "masuk-kamar-mandi",
+    "title": "Doa Masuk Kamar Mandi",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+    "latinText": "Allaahumma innii a'uudzubika minal khubutsi wal khabaa-its",
+    "translation": "Ya Allah, aku berlindung kepada-Mu dari godaan setan laki-laki dan setan perempuan",
+    "category": "kamar-mandi"
+  },
+  {
+    "id": "keluar-kamar-mandi",
+    "title": "Doa Keluar Kamar Mandi",
+    "arabicText": "غُفْرَانَكَ",
+    "latinText": "Ghufraanaka",
+    "translation": "Aku memohon ampunan-Mu ya Allah",
+    "category": "kamar-mandi"
+  },
+  {
+    "id": "naik-kendaraan",
+    "title": "Doa Naik Kendaraan",
+    "arabicText": "سُبْحَانَ الَّذِيْ سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُوْنَ",
+    "latinText": "Subhaanalladzii sakhkhoro lanaa haadzaa wa maa kunnaa lahuu muqriniin wa innaa ilaa robbinaa lamunqolibuun",
+    "translation": "Maha Suci Allah yang telah menundukkan ini untuk kami, padahal kami sebelumnya tidak mampu menguasainya, dan sesungguhnya kami akan kembali kepada Tuhan kami",
+    "category": "kendaraan"
+  },
+  {
+    "id": "masuk-masjid",
+    "title": "Doa Masuk Masjid",
+    "arabicText": "اَللَّهُمَّ افْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ",
+    "latinText": "Allaahumaftah lii abwaaba rohmatik",
+    "translation": "Ya Allah, bukakanlah bagiku pintu-pintu rahmat-Mu",
+    "category": "masjid"
+  },
+  {
+    "id": "keluar-masjid",
+    "title": "Doa Keluar Masjid",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ فَضْلِكَ",
+    "latinText": "Allaahumma innii as-aluka min fadlik",
+    "translation": "Ya Allah, sesungguhnya aku memohon kepada-Mu dari karunia-Mu",
+    "category": "masjid"
+  },
+  {
+    "id": "bercermin",
+    "title": "Doa Bercermin",
+    "arabicText": "اَللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِيْ فَحَسِّنْ خُلُقِيْ",
+    "latinText": "Allaahumma kamaa hassanta kholqii fahassin khuluqii",
+    "translation": "Ya Allah, sebagaimana Engkau telah memperindah rupaku, maka perindahlah pula akhlakku",
+    "category": "ibadah"
+  }
+]

@@ -1,13 +1,6 @@
-import { FocusProvider } from '@/navigation/FocusContext'
-import { TVLayout } from '@/layouts/TVLayout'
-import { HomePage } from '@/pages/HomePage'
+import { RouterProvider } from 'react-router-dom'
+import { router } from '@/router'
 
 export function App() {
-  return (
-    <FocusProvider>
-      <TVLayout>
-        <HomePage />
-      </TVLayout>
-    </FocusProvider>
-  )
+  return <RouterProvider router={router} />
 }
