@@ -3,17 +3,16 @@ import { cn } from '@/lib/cn'
 interface ArabicTextProps {
   text: string
   className?: string
+  style?: React.CSSProperties
 }
 
-export function ArabicText({ text, className }: ArabicTextProps) {
+export function ArabicText({ text, className, style }: ArabicTextProps) {
   return (
     <p
       dir="rtl"
       lang="ar"
-      className={cn(
-        'font-arabic font-bold text-tv-arabic text-text-primary text-center',
-        className
-      )}
+      style={style}
+      className={cn('font-arabic font-bold text-text-primary text-center', className)}
     >
       {text}
     </p>

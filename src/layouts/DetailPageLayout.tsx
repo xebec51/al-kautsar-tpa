@@ -85,7 +85,10 @@ export function DetailPageLayout({
           <>
             {/* Arabic: fills remaining space, text starts at top */}
             <div className="flex-1 min-h-0 overflow-hidden pt-tv-2">
-              <ArabicText text={arabicText} />
+              <ArabicText
+                text={arabicText}
+                style={{ fontSize: '96px', lineHeight: '1.6' }}
+              />
             </div>
 
             {/* Latin + Translation: anchored to bottom of content area */}
