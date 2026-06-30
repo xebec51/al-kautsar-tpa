@@ -1,6 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArabicText } from '@/components/ui/ArabicText'
+import { FocusRing } from '@/components/ui/FocusRing'
+import { FontSettingsModal } from '@/components/ui/FontSettingsModal'
 import { Typography } from '@/components/ui/Typography'
+import { useFontSettings } from '@/contexts/useFontSettings'
+import { useFocusable } from '@/navigation/useFocusable'
 
 interface DetailPageLayoutProps {
   title: string
@@ -29,9 +33,14 @@ export function DetailPageLayout({
   onPrev,
   onNext,
 }: DetailPageLayoutProps) {
+  const { latinSize, meaningSize } = useFontSettings()
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+
+  // Stable refs for callbacks
   const onBackRef = useRef(onBack)
   const onPrevRef = useRef(onPrev)
   const onNextRef = useRef(onNext)
+  const isSettingsOpenRef = useRef(false)
 
   useEffect(() => {
     onBackRef.current = onBack
@@ -39,10 +48,28 @@ export function DetailPageLayout({
     onNextRef.current = onNext
   })
 
-  // Capture phase: intercepts before FocusManager's bubble-phase handler.
-  // Left/Escape = back, Up = previous, Down = next.
+  useEffect(() => {
+    isSettingsOpenRef.current = isSettingsOpen
+  }, [isSettingsOpen])
+
+  // "Aa" settings button in header
+  const { ref: aaRef, isFocused: aaFocused, focusSelf: focusAaBtn } = useFocusable<HTMLButtonElement>(
+    'detail-font-settings-btn'
+  )
+
+  const closeModal = () => {
+    setIsSettingsOpen(false)
+    // Return focus to the settings button after modal unmounts
+    requestAnimationFrame(focusAaBtn)
+  }
+
+  // Capture-phase handler: fires before FocusManager's bubble-phase handler.
+  // Yields entirely when the settings modal is open — the modal has its own handler
+  // registered after this one, which calls stopImmediatePropagation to take over.
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
+      if (isSettingsOpenRef.current) return
+
       switch (e.key) {
         case 'ArrowLeft':
         case 'Escape':
@@ -69,14 +96,25 @@ export function DetailPageLayout({
 
   return (
     <div className="w-full h-full flex flex-col">
-      {/* Header: compact */}
+      {/* Header */}
       <div className="flex items-center justify-between px-[4%] pt-tv-4 pb-tv-2 shrink-0">
         <Typography variant="heading" className="text-text-primary font-bold">
           {title}
         </Typography>
-        <span className="text-tv-sm text-text-muted">
-          {position.current} / {position.total}
-        </span>
+        <div className="flex items-center gap-tv-3">
+          <FocusRing active={aaFocused} className="rounded-tv-sm">
+            <button
+              ref={aaRef}
+              onClick={() => setIsSettingsOpen(true)}
+              className="px-tv-3 py-tv-2 bg-overlay border border-border rounded-tv-sm text-tv-sm font-bold text-text-secondary cursor-pointer"
+            >
+              Aa
+            </button>
+          </FocusRing>
+          <span className="text-tv-sm text-text-muted">
+            {position.current} / {position.total}
+          </span>
+        </div>
       </div>
 
       {/*
@@ -90,15 +128,22 @@ export function DetailPageLayout({
 
         {arabicText ? (
           <div className="flex flex-col gap-tv-4 py-tv-4">
-            <ArabicText
-              text={arabicText}
-              style={{ fontSize: '140px', lineHeight: '1.8' }}
-            />
+            <ArabicText text={arabicText} />
             {latinText && (
-              <p className="text-tv-lg italic text-text-secondary text-center">{latinText}</p>
+              <p
+                style={{ fontSize: `${latinSize}px` }}
+                className="italic text-text-secondary text-center transition-all duration-300 ease-in-out"
+              >
+                {latinText}
+              </p>
             )}
             {translation && (
-              <p className="text-tv-base text-text-secondary text-center">{translation}</p>
+              <p
+                style={{ fontSize: `${meaningSize}px` }}
+                className="text-text-secondary text-center transition-all duration-300 ease-in-out"
+              >
+                {translation}
+              </p>
             )}
           </div>
         ) : content ? (
@@ -112,7 +157,7 @@ export function DetailPageLayout({
         <div className="flex-1 min-h-0" />
       </div>
 
-      {/* Footer: subtle navigation hints */}
+      {/* Footer: navigation hints */}
       <div className="flex items-center justify-between px-[4%] pb-tv-4 shrink-0">
         {prevTitle ? (
           <span className="text-tv-sm text-text-muted">↑ {prevTitle}</span>
@@ -125,6 +170,8 @@ export function DetailPageLayout({
           <span />
         )}
       </div>
+
+      {isSettingsOpen && <FontSettingsModal onClose={closeModal} />}
     </div>
   )
 }
