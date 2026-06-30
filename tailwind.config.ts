@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        arabic: ['Cairo', 'Noto Naskh Arabic', 'Traditional Arabic', 'Arabic', 'sans-serif'],
+        arabic: ['Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', 'Arabic', 'serif'],
       },
       fontSize: {
         'tv-xs': ['1.25rem', { lineHeight: '1.75rem' }],

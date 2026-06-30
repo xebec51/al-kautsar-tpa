@@ -79,40 +79,37 @@ export function DetailPageLayout({
         </span>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 min-h-0 flex flex-col px-[4%]">
-        {arabicText ? (
-          <>
-            {/* Arabic: fills remaining space, text starts at top */}
-            <div className="flex-1 min-h-0 overflow-hidden pt-tv-2">
-              <ArabicText
-                text={arabicText}
-                style={{ fontSize: '96px', lineHeight: '1.6' }}
-              />
-            </div>
+      {/*
+        Content: smart vertical centering via double flex-1 spacers.
+        - Short content: spacers share remaining space equally → centered.
+        - Long content: spacers shrink to 0 (min-h-0) → content starts at top,
+          overflow clipped at bottom. First line is always visible.
+      */}
+      <div className="flex-1 min-h-0 overflow-hidden px-[4%] flex flex-col">
+        <div className="flex-1 min-h-0" />
 
-            {/* Latin + Translation: anchored to bottom of content area */}
-            {(latinText || translation) && (
-              <div className="shrink-0 pt-tv-4 pb-tv-4">
-                {latinText && (
-                  <p className="text-tv-lg italic text-text-secondary text-center">{latinText}</p>
-                )}
-                {translation && (
-                  <p className="mt-tv-2 text-tv-base text-text-secondary text-center">
-                    {translation}
-                  </p>
-                )}
-              </div>
+        {arabicText ? (
+          <div className="flex flex-col gap-tv-4 py-tv-4">
+            <ArabicText
+              text={arabicText}
+              style={{ fontSize: '140px', lineHeight: '1.8' }}
+            />
+            {latinText && (
+              <p className="text-tv-lg italic text-text-secondary text-center">{latinText}</p>
             )}
-          </>
+            {translation && (
+              <p className="text-tv-base text-text-secondary text-center">{translation}</p>
+            )}
+          </div>
         ) : content ? (
-          /* Text-only materials (fiqh, akhlak, akidah, tahsin) */
-          <div className="flex-1 min-h-0 overflow-hidden pt-tv-2 pb-tv-4">
+          <div className="py-tv-4">
             <p className="text-tv-base text-text-primary whitespace-pre-wrap leading-relaxed">
               {content}
             </p>
           </div>
         ) : null}
+
+        <div className="flex-1 min-h-0" />
       </div>
 
       {/* Footer: subtle navigation hints */}
