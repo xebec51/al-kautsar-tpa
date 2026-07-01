@@ -28,7 +28,7 @@ export function Card({ id, onClick, compact = false, className, children }: Card
         tabIndex={-1}
         onClick={onClick}
         className={cn(
-          'bg-overlay border border-border rounded-tv-lg shadow-tv-card h-full',
+          'bg-overlay border border-border rounded-tv-lg shadow-tv-card h-full scroll-m-3',
           compact ? 'p-tv-2' : 'p-tv-6',
           className
         )}

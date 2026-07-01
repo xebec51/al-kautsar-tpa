@@ -98,9 +98,17 @@ export function DetailPageLayout({
     <div className="w-full h-full flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between px-[4%] pt-tv-4 pb-tv-2 shrink-0">
-        <Typography variant="heading" className="text-text-primary font-bold">
-          {title}
-        </Typography>
+        <div className="flex items-center gap-tv-4">
+          <button
+            onClick={onBack}
+            className="text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
+          >
+            ← Kembali
+          </button>
+          <Typography variant="heading" className="text-text-primary font-bold">
+            {title}
+          </Typography>
+        </div>
         <div className="flex items-center gap-tv-3">
           <FocusRing active={aaFocused} className="rounded-tv-sm">
             <button

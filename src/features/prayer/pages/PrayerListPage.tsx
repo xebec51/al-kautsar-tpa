@@ -17,7 +17,7 @@ export function PrayerListPage() {
         <Typography variant="heading">Bacaan Shalat</Typography>
       </div>
 
-      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-2">
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-3 px-3">
         <div className="grid grid-cols-3 gap-tv-3">
           {prayers.map((prayer) => (
             <Card
@@ -26,8 +26,8 @@ export function PrayerListPage() {
               compact
               onClick={() => navigate(`/prayer/${prayer.id}`)}
             >
-              <p className="text-tv-sm font-semibold text-text-primary mb-tv-1">{prayer.title}</p>
-              <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
+              <p className="text-tv-xs font-semibold text-text-primary mb-1">{prayer.title}</p>
+              <p className="text-base font-medium text-text-muted uppercase tracking-wider">
                 {prayer.category === 'wajib' ? 'Wajib' : 'Sunnah'}
               </p>
             </Card>

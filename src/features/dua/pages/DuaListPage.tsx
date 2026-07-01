@@ -29,12 +29,12 @@ export function DuaListPage() {
         <Typography variant="heading">Doa Harian</Typography>
       </div>
 
-      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-2">
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-3 px-3">
         <div className="grid grid-cols-3 gap-tv-3">
           {duas.map((dua) => (
             <Card key={dua.id} id={`dua-${dua.id}`} compact onClick={() => navigate(`/dua/${dua.id}`)}>
-              <p className="text-tv-sm font-semibold text-text-primary mb-tv-1">{dua.title}</p>
-              <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
+              <p className="text-tv-xs font-semibold text-text-primary mb-1">{dua.title}</p>
+              <p className="text-base font-medium text-text-muted uppercase tracking-wider">
                 {CATEGORY_LABELS[dua.category] ?? dua.category}
               </p>
             </Card>
