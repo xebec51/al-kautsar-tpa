@@ -25,7 +25,7 @@ export function MaterialListPage() {
         <Typography variant="heading">Materi TPA</Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-tv-3 overflow-hidden">
+      <div className="grid grid-cols-3 gap-tv-3">
         {materials.map((material) => (
           <Card
             key={material.id}

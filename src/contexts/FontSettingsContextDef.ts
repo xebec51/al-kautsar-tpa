@@ -13,7 +13,7 @@ export interface FontSettings {
 }
 
 export const ARABIC_STEP = 8
-export const ARABIC_MIN = 80
+export const ARABIC_MIN = 40
 export const ARABIC_MAX = 220
 export const ARABIC_DEFAULT = 140
 

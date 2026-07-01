@@ -25,11 +25,11 @@
   },
   {
     "id": "itidal",
-    "title": "Doa I'tidal",
+    "title": "Bacaan I'tidal",
     "category": "wajib",
-    "arabicText": "رَبَّنَا وَلَكَ الْحَمْدُ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ",
-    "latinText": "Rabbanā wa lakal-hamdu hamdan kathīran thayyiban mubārakan fīh.",
-    "translation": "Ya Tuhan kami, dan bagi-Mu segala puji, pujian yang banyak, yang baik dan yang diberkahi."
+    "arabicText": "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ رَبَّنَا لَكَ الْحَمْدُ",
+    "latinText": "Sami'allaahu liman hamidah, Rabbanaa lakal hamdu",
+    "translation": "Allah mendengar orang yang memuji-Nya. Wahai Tuhan kami, segala puji hanya untuk-Mu"
   },
   {
     "id": "sujud",

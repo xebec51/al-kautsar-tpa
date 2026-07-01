@@ -13,6 +13,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   kendaraan: 'Kendaraan',
   masjid: 'Masjid',
   ibadah: 'Ibadah',
+  belajar: 'Belajar',
+  keluarga: 'Keluarga',
 }
 
 export function DuaListPage() {
@@ -27,7 +29,7 @@ export function DuaListPage() {
         <Typography variant="heading">Doa Harian</Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-tv-3 overflow-hidden">
+      <div className="grid grid-cols-3 gap-tv-3">
         {duas.map((dua) => (
           <Card key={dua.id} id={`dua-${dua.id}`} compact onClick={() => navigate(`/dua/${dua.id}`)}>
             <p className="text-tv-lg font-semibold text-text-primary mb-tv-1">{dua.title}</p>

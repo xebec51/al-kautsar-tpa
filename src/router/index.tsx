@@ -8,6 +8,7 @@ import { DuaDetailPage } from '@/features/dua/pages/DuaDetailPage'
 import { MaterialListPage } from '@/features/tpa/pages/MaterialListPage'
 import { MaterialDetailPage } from '@/features/tpa/pages/MaterialDetailPage'
 import { AdminPage } from '@/features/admin/pages/AdminPage'
+import { SettingsPage } from '@/features/settings/pages/SettingsPage'
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       { path: 'dua/:id', element: <DuaDetailPage /> },
       { path: 'material', element: <MaterialListPage /> },
       { path: 'material/:id', element: <MaterialDetailPage /> },
+      { path: 'settings', element: <SettingsPage /> },
     ],
   },
   // Admin dashboard: desktop-only, outside TV layout

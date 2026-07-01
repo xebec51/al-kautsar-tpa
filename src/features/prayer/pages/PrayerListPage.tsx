@@ -17,7 +17,7 @@ export function PrayerListPage() {
         <Typography variant="heading">Bacaan Shalat</Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-tv-3 overflow-hidden">
+      <div className="grid grid-cols-3 gap-tv-3">
         {prayers.map((prayer) => (
           <Card
             key={prayer.id}
