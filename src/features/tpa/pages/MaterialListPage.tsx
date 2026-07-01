@@ -25,20 +25,22 @@ export function MaterialListPage() {
         <Typography variant="heading">Materi TPA</Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-tv-3">
-        {materials.map((material) => (
-          <Card
-            key={material.id}
-            id={`material-${material.id}`}
-            compact
-            onClick={() => navigate(`/material/${material.id}`)}
-          >
-            <p className="text-tv-lg font-semibold text-text-primary mb-tv-1">{material.title}</p>
-            <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
-              {CATEGORY_LABELS[material.category] ?? material.category}
-            </p>
-          </Card>
-        ))}
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-2">
+        <div className="grid grid-cols-3 gap-tv-3">
+          {materials.map((material) => (
+            <Card
+              key={material.id}
+              id={`material-${material.id}`}
+              compact
+              onClick={() => navigate(`/material/${material.id}`)}
+            >
+              <p className="text-tv-base font-semibold text-text-primary mb-tv-1">{material.title}</p>
+              <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
+                {CATEGORY_LABELS[material.category] ?? material.category}
+              </p>
+            </Card>
+          ))}
+        </div>
       </div>
     </Container>
   )
