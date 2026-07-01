@@ -26,7 +26,7 @@ export function PrayerListPage() {
               compact
               onClick={() => navigate(`/prayer/${prayer.id}`)}
             >
-              <p className="text-tv-base font-semibold text-text-primary mb-tv-1">{prayer.title}</p>
+              <p className="text-tv-sm font-semibold text-text-primary mb-tv-1">{prayer.title}</p>
               <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
                 {prayer.category === 'wajib' ? 'Wajib' : 'Sunnah'}
               </p>

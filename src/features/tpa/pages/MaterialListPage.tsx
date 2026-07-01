@@ -34,7 +34,7 @@ export function MaterialListPage() {
               compact
               onClick={() => navigate(`/material/${material.id}`)}
             >
-              <p className="text-tv-base font-semibold text-text-primary mb-tv-1">{material.title}</p>
+              <p className="text-tv-sm font-semibold text-text-primary mb-tv-1">{material.title}</p>
               <p className="text-tv-xs font-medium text-text-muted uppercase tracking-wider">
                 {CATEGORY_LABELS[material.category] ?? material.category}
               </p>

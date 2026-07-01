@@ -157,15 +157,25 @@ export function DetailPageLayout({
         <div className="flex-1 min-h-0" />
       </div>
 
-      {/* Footer: navigation hints */}
+      {/* Footer: navigation buttons */}
       <div className="flex items-center justify-between px-[4%] pb-tv-4 shrink-0">
         {prevTitle ? (
-          <span className="text-tv-sm text-text-muted">↑ {prevTitle}</span>
+          <button
+            onClick={onPrev}
+            className="text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
+          >
+            ↑ {prevTitle}
+          </button>
         ) : (
           <span />
         )}
         {nextTitle ? (
-          <span className="text-tv-sm text-text-muted">{nextTitle} ↓</span>
+          <button
+            onClick={onNext}
+            className="text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
+          >
+            {nextTitle} ↓
+          </button>
         ) : (
           <span />
         )}
