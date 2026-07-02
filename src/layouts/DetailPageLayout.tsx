@@ -5,6 +5,7 @@ import { FontSettingsModal } from '@/components/ui/FontSettingsModal'
 import { Typography } from '@/components/ui/Typography'
 import { useFontSettings } from '@/contexts/useFontSettings'
 import { useFocusable } from '@/navigation/useFocusable'
+import { normalizeRemoteKey } from '@/navigation/RemoteKeyMap'
 
 interface DetailPageLayoutProps {
   title: string
@@ -70,19 +71,20 @@ export function DetailPageLayout({
     function handleKeyDown(e: KeyboardEvent) {
       if (isSettingsOpenRef.current) return
 
-      switch (e.key) {
-        case 'ArrowLeft':
-        case 'Escape':
+      const action = normalizeRemoteKey(e)
+      switch (action) {
+        case 'LEFT':
+        case 'BACK':
           e.stopImmediatePropagation()
           e.preventDefault()
           onBackRef.current()
           break
-        case 'ArrowUp':
+        case 'UP':
           e.stopImmediatePropagation()
           e.preventDefault()
           onPrevRef.current?.()
           break
-        case 'ArrowDown':
+        case 'DOWN':
           e.stopImmediatePropagation()
           e.preventDefault()
           onNextRef.current?.()

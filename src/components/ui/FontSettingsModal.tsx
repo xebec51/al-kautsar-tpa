@@ -4,6 +4,7 @@ import { FocusRing } from '@/components/ui/FocusRing'
 import { useFocusable } from '@/navigation/useFocusable'
 import { focusManager } from '@/navigation/FocusManager'
 import { useFontSettings } from '@/contexts/useFontSettings'
+import { normalizeRemoteKey } from '@/navigation/RemoteKeyMap'
 
 // Navigation grid — rows top-to-bottom, columns left-to-right
 const MODAL_GRID: string[][] = [
@@ -125,25 +126,26 @@ export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
       e.stopImmediatePropagation()
       e.preventDefault()
 
+      const action = normalizeRemoteKey(e)
       const currentId = focusManager.getFocused() ?? 'font-modal-arabic-dec'
 
-      switch (e.key) {
-        case 'Escape':
+      switch (action) {
+        case 'BACK':
           onCloseRef.current()
           break
-        case 'ArrowUp':
+        case 'UP':
           focusManager.setFocus(navigateGrid(currentId, 'up'))
           break
-        case 'ArrowDown':
+        case 'DOWN':
           focusManager.setFocus(navigateGrid(currentId, 'down'))
           break
-        case 'ArrowLeft':
+        case 'LEFT':
           focusManager.setFocus(navigateGrid(currentId, 'left'))
           break
-        case 'ArrowRight':
+        case 'RIGHT':
           focusManager.setFocus(navigateGrid(currentId, 'right'))
           break
-        case 'Enter':
+        case 'ENTER':
           focusManager.triggerEnter()
           break
       }

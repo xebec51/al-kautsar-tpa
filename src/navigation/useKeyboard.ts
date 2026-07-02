@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useFocusContext } from './useFocusContext'
+import { normalizeRemoteKey } from './RemoteKeyMap'
 
 export function useKeyboard(onBack?: () => void): void {
   const { moveFocus, triggerEnter } = useFocusContext()
@@ -11,28 +12,29 @@ export function useKeyboard(onBack?: () => void): void {
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
-      switch (e.key) {
-        case 'ArrowUp':
+      const action = normalizeRemoteKey(e)
+      switch (action) {
+        case 'UP':
           e.preventDefault()
           moveFocus('up')
           break
-        case 'ArrowDown':
+        case 'DOWN':
           e.preventDefault()
           moveFocus('down')
           break
-        case 'ArrowLeft':
+        case 'LEFT':
           e.preventDefault()
           moveFocus('left')
           break
-        case 'ArrowRight':
+        case 'RIGHT':
           e.preventDefault()
           moveFocus('right')
           break
-        case 'Enter':
+        case 'ENTER':
           e.preventDefault()
           triggerEnter()
           break
-        case 'Escape':
+        case 'BACK':
           e.preventDefault()
           onBackRef.current?.()
           break
