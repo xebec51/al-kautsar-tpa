@@ -96,6 +96,38 @@
     "category": "ibadah"
   },
   {
+    "id": "setelah-wudhu",
+    "title": "Doa Setelah Wudhu",
+    "arabicText": "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ اَللَّهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ",
+    "latinText": "Asyhadu allaa ilaaha illallaahu wahdahu laa syariika lahu wa asyhadu anna Muhammadan 'abduhu wa rasuuluhu. Allaahummaj'alnii minat tawwaabiina waj'alnii minal mutathahiriin",
+    "translation": "Aku bersaksi bahwa tidak ada Tuhan selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya, dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya. Ya Allah, jadikanlah aku termasuk orang-orang yang bertaubat dan jadikanlah aku termasuk orang-orang yang bersuci",
+    "category": "ibadah"
+  },
+  {
+    "id": "niat-puasa",
+    "title": "Niat Puasa Ramadan",
+    "arabicText": "نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى",
+    "latinText": "Nawaitu shauma ghadin 'an adaa-i fardhi syahri ramadhaana haadzihis-sanati lillaahi ta'aalaa",
+    "translation": "Aku niat berpuasa esok hari untuk menunaikan kewajiban puasa bulan Ramadan tahun ini karena Allah Ta'ala",
+    "category": "ibadah"
+  },
+  {
+    "id": "berbuka-puasa",
+    "title": "Doa Berbuka Puasa",
+    "arabicText": "اَللَّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ",
+    "latinText": "Allaahumma laka shumtu wa bika aamantu wa 'alaa rizqika afthartu",
+    "translation": "Ya Allah, karena-Mu aku berpuasa, kepada-Mu aku beriman, dan dengan rezeki-Mu aku berbuka",
+    "category": "ibadah"
+  },
+  {
+    "id": "ketika-bersin",
+    "title": "Doa Ketika Bersin",
+    "arabicText": "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ",
+    "latinText": "Alhamdulillaahi rabbil 'aalamiin",
+    "translation": "Segala puji bagi Allah, Tuhan seluruh alam. (Dijawab: Yarhamukallah — Semoga Allah merahmatimu. Balas: Yahdiikumullah wa yushlih baalakum — Semoga Allah memberi petunjuk dan memperbaiki keadaanmu)",
+    "category": "ibadah"
+  },
+  {
     "id": "sebelum-belajar",
     "title": "Doa Sebelum Belajar",
     "arabicText": "رَبِّ زِدْنِيْ عِلْمًا وَارْزُقْنِيْ فَهْمًا وَاجْعَلْنِيْ مِنَ الصَّالِحِيْنَ",
