@@ -128,6 +128,30 @@
     "category": "ibadah"
   },
   {
+    "id": "ketika-hujan",
+    "title": "Doa Ketika Hujan",
+    "arabicText": "اَللَّهُمَّ صَيِّبًا نَافِعًا",
+    "latinText": "Allaahumma shayyiban naafi'an",
+    "translation": "Ya Allah, jadikanlah hujan ini hujan yang bermanfaat",
+    "category": "ibadah"
+  },
+  {
+    "id": "masuk-pasar",
+    "title": "Doa Masuk Pasar",
+    "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِيْ وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+    "latinText": "Laa ilaaha illallaahu wahdahu laa syariika lahu, lahul mulku wa lahul hamdu, yuhyii wa yumiitu wa huwa hayyun laa yamuutu, biyadihil khairu wa huwa 'alaa kulli syai-in qadiir",
+    "translation": "Tidak ada Tuhan selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya. Bagi-Nya segala kerajaan dan bagi-Nya segala puji. Dia yang menghidupkan dan mematikan, Dia Maha Hidup dan tidak akan mati. Di tangan-Nya kebaikan, dan Dia Maha Kuasa atas segala sesuatu",
+    "category": "ibadah"
+  },
+  {
+    "id": "mohon-ampunan-orang-tua",
+    "title": "Doa untuk Kedua Orang Tua",
+    "arabicText": "رَبِّ اغْفِرْلِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا",
+    "latinText": "Rabbighfirlii wa liwaalidayya warhamhumaa kamaa rabbayaanii shaghiiraa",
+    "translation": "Ya Allah, ampunilah aku dan kedua orang tuaku, sayangilah mereka sebagaimana mereka menyayangiku di waktu kecil",
+    "category": "keluarga"
+  },
+  {
     "id": "sebelum-belajar",
     "title": "Doa Sebelum Belajar",
     "arabicText": "رَبِّ زِدْنِيْ عِلْمًا وَارْزُقْنِيْ فَهْمًا وَاجْعَلْنِيْ مِنَ الصَّالِحِيْنَ",
@@ -142,14 +166,6 @@
     "latinText": "Allaahumma arinal haqqa haqqan, warzuqnat tiba'ahu, wa arinal baatila baatilan, warzuqnaj tinabahu",
     "translation": "Ya Allah, tunjukkanlah kepada kami kebenaran sebagai kebenaran dan karuniakanlah kami untuk mengikutinya, serta tunjukkanlah kepada kami kebatilan sebagai kebatilan dan karuniakanlah kami untuk menjauhinya",
     "category": "belajar"
-  },
-  {
-    "id": "mohon-ampunan-orang-tua",
-    "title": "Doa untuk Kedua Orang Tua",
-    "arabicText": "رَبِّ اغْفِرْلِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا",
-    "latinText": "Rabbighfirlii wa liwaalidayya warhamhumaa kamaa rabbayaanii shaghiiraa",
-    "translation": "Ya Allah, ampunilah aku dan kedua orang tuaku, sayangilah mereka sebagaimana mereka menyayangiku di waktu kecil",
-    "category": "keluarga"
   },
   {
     "id": "khatmil-quran-1",
