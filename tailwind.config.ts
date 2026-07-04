@@ -15,7 +15,6 @@ const config: Config = {
         'tv-xl': ['3rem', { lineHeight: '3.75rem' }],
         'tv-2xl': ['4rem', { lineHeight: '4.75rem' }],
         'tv-3xl': ['5rem', { lineHeight: '5.75rem' }],
-        // Arabic prayer text — 96px for classroom TV viewing; Cairo has ~65% optical efficiency
         'tv-arabic': ['6rem', { lineHeight: '1.6' }],
       },
       spacing: {
@@ -29,24 +28,24 @@ const config: Config = {
         'tv-16': '8rem',
       },
       colors: {
-        surface: '#0a0a0a',
-        panel: '#161616',
-        overlay: '#1e1e1e',
-        border: '#2a2a2a',
+        surface: 'var(--color-surface)',
+        panel: 'var(--color-panel)',
+        overlay: 'var(--color-overlay)',
+        border: 'var(--color-border)',
         accent: {
-          DEFAULT: '#22c55e',
-          hover: '#16a34a',
-          dim: '#14532d',
+          DEFAULT: 'var(--color-accent)',
+          hover: 'var(--color-accent-hover)',
+          dim: 'var(--color-accent-dim)',
         },
         text: {
-          primary: '#f5f5f5',
-          secondary: '#a3a3a3',
-          muted: '#525252',
-          inverse: '#0a0a0a',
+          primary: 'var(--color-text-primary)',
+          secondary: 'var(--color-text-secondary)',
+          muted: 'var(--color-text-muted)',
+          inverse: 'var(--color-text-inverse)',
         },
         focus: {
-          ring: '#22c55e',
-          shadow: '#166534',
+          ring: 'var(--color-focus-ring)',
+          shadow: 'var(--color-focus-shadow)',
         },
       },
       borderRadius: {
@@ -56,9 +55,9 @@ const config: Config = {
         'tv-xl': '2rem',
       },
       boxShadow: {
-        'tv-focus': '0 0 0 4px #22c55e, 0 0 0 8px rgba(22, 101, 52, 0.4)',
-        'tv-card': '0 4px 24px rgba(0, 0, 0, 0.5)',
-        'tv-panel': '0 2px 12px rgba(0, 0, 0, 0.4)',
+        'tv-focus': '0 0 0 4px var(--color-focus-ring), 0 0 0 8px var(--color-focus-shadow)',
+        'tv-card': '0 4px 24px rgba(0, 0, 0, 0.3)',
+        'tv-panel': '0 2px 12px rgba(0, 0, 0, 0.2)',
       },
     },
   },

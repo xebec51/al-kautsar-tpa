@@ -1,11 +1,47 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { cn } from '@/lib/cn'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { FocusRing } from '@/components/ui/FocusRing'
 import { Panel } from '@/components/ui/Panel'
 import { Typography } from '@/components/ui/Typography'
 import { useFontSettings } from '@/contexts/useFontSettings'
+import { useTheme } from '@/contexts/useTheme'
+import type { Theme } from '@/contexts/ThemeContextDef'
+import { focusManager } from '@/navigation/FocusManager'
 import { useFocusable } from '@/navigation/useFocusable'
+
+// ─── Theme button ─────────────────────────────────────────────────────────────
+
+interface ThemeButtonProps {
+  id: string
+  label: string
+  active: boolean
+  onClick: () => void
+}
+
+function ThemeButton({ id, label, active, onClick }: ThemeButtonProps) {
+  const { ref, isFocused } = useFocusable<HTMLButtonElement>(id)
+  return (
+    <FocusRing active={isFocused} className="rounded-tv flex-1">
+      <button
+        ref={ref}
+        onClick={onClick}
+        className={cn(
+          'w-full py-tv-4 rounded-tv text-tv-base font-semibold cursor-pointer border transition-colors',
+          active
+            ? 'bg-accent text-text-inverse border-accent'
+            : 'bg-overlay text-text-secondary border-border'
+        )}
+      >
+        {label}
+      </button>
+    </FocusRing>
+  )
+}
+
+// ─── Font row ─────────────────────────────────────────────────────────────────
 
 const BTN =
   'w-20 h-20 bg-overlay border border-border rounded-tv text-tv-xl font-bold text-text-primary cursor-pointer flex items-center justify-center select-none'
@@ -23,7 +59,7 @@ function FontRow({ label, value, decId, incId, onDecrease, onIncrease }: FontRow
   const dec = useFocusable<HTMLButtonElement>(decId)
   const inc = useFocusable<HTMLButtonElement>(incId)
   return (
-    <div className="flex items-center justify-between gap-tv-4 py-tv-2">
+    <div className="flex items-center justify-between gap-tv-4 py-tv-3">
       <span className="text-tv-base text-text-secondary flex-1">{label}</span>
       <div className="flex items-center gap-tv-3">
         <FocusRing active={dec.isFocused} className="rounded-tv">
@@ -44,8 +80,16 @@ function FontRow({ label, value, decId, incId, onDecrease, onIncrease }: FontRow
   )
 }
 
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+const THEME_OPTIONS: { value: Theme; label: string }[] = [
+  { value: 'dark', label: 'Gelap' },
+  { value: 'light', label: 'Terang' },
+]
+
 export function SettingsPage() {
   const navigate = useNavigate()
+  const { theme, setTheme } = useTheme()
   const {
     arabicSize,
     latinSize,
@@ -58,9 +102,16 @@ export function SettingsPage() {
     decreaseMeaningSize,
   } = useFontSettings()
 
+  // Ensure focus lands on back button when page mounts
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      focusManager.setFocus('settings-back')
+    })
+  }, [])
+
   return (
     <Container className="flex flex-col h-full py-tv-6">
-      <div className="flex items-center gap-tv-4 mb-tv-6">
+      <div className="flex items-center gap-tv-4 mb-tv-6 shrink-0">
         <Button id="settings-back" variant="ghost" onClick={() => navigate('/')}>
           ← Kembali
         </Button>
@@ -68,8 +119,27 @@ export function SettingsPage() {
       </div>
 
       <div className="flex flex-col gap-tv-6 max-w-[960px]">
+        {/* Theme */}
         <Panel>
           <Typography variant="title" className="mb-tv-4">
+            Tema Tampilan
+          </Typography>
+          <div className="flex gap-tv-4">
+            {THEME_OPTIONS.map((opt) => (
+              <ThemeButton
+                key={opt.value}
+                id={`settings-theme-${opt.value}`}
+                label={opt.label}
+                active={theme === opt.value}
+                onClick={() => setTheme(opt.value)}
+              />
+            ))}
+          </div>
+        </Panel>
+
+        {/* Font sizes */}
+        <Panel>
+          <Typography variant="title" className="mb-tv-2">
             Ukuran Font
           </Typography>
           <div className="flex flex-col divide-y divide-border">
@@ -98,18 +168,6 @@ export function SettingsPage() {
               onIncrease={increaseMeaningSize}
             />
           </div>
-        </Panel>
-
-        <Panel>
-          <Typography variant="title" className="mb-tv-2">
-            Tentang Aplikasi
-          </Typography>
-          <Typography variant="body" className="text-text-secondary mt-tv-2">
-            Al-Kautsar TPA
-          </Typography>
-          <Typography variant="caption" className="text-text-muted mt-tv-1">
-            Media pembelajaran TPA Masjid Al-Kautsar. Dioptimalkan untuk Smart TV VIDAA.
-          </Typography>
         </Panel>
       </div>
     </Container>

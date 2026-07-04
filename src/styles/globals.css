@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ───────────────────────────────────────────────
+   Design tokens — dark theme (default)
+─────────────────────────────────────────────── */
+:root {
+  --color-surface: #0a0a0a;
+  --color-panel: #161616;
+  --color-overlay: #1e1e1e;
+  --color-border: #2a2a2a;
+
+  --color-accent: #22c55e;
+  --color-accent-hover: #16a34a;
+  --color-accent-dim: #14532d;
+
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #525252;
+  --color-text-inverse: #0a0a0a;
+
+  --color-focus-ring: #22c55e;
+  --color-focus-shadow: rgba(22, 101, 52, 0.4);
+}
+
+/* ───────────────────────────────────────────────
+   Light theme overrides
+─────────────────────────────────────────────── */
+[data-theme="light"] {
+  --color-surface: #f0f4f0;
+  --color-panel: #ffffff;
+  --color-overlay: #e6ede6;
+  --color-border: #c4d4c4;
+
+  --color-accent: #16a34a;
+  --color-accent-hover: #15803d;
+  --color-accent-dim: #dcfce7;
+
+  --color-text-primary: #0d1a0d;
+  --color-text-secondary: #374837;
+  --color-text-muted: #6b7d6b;
+  --color-text-inverse: #ffffff;
+
+  --color-focus-ring: #16a34a;
+  --color-focus-shadow: rgba(22, 163, 74, 0.4);
+}
+
 @layer utilities {
   .scrollbar-hide {
     scrollbar-width: none;
@@ -30,8 +74,8 @@
   }
 
   body {
-    background-color: #0a0a0a;
-    color: #f5f5f5;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
     font-family:
       system-ui,
       -apple-system,
