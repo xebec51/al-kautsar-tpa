@@ -139,7 +139,7 @@
     "id": "masuk-pasar",
     "title": "Doa Masuk Pasar",
     "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِيْ وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
-    "latinText": "Laa ilaaha illallaahu wahdahu laa syariika lahu, lahul mulku wa lahul hamdu, yuhyii wa yumiitu wa huwa hayyun laa yamuutu, biyadihil khairu wa huwa 'alaa kulli syai-in qadiir",
+    "latinText": "Laa ilaaha illallaahu wahdahu laaa syariika lahu, lahul mulku wa lahul hamdu, yuhyii wa yumiitu wa huwa hayyun laa yamuutu, biyadihil khairu wa huwa 'alaa kulli syai-in qadiir",
     "translation": "Tidak ada Tuhan selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya. Bagi-Nya segala kerajaan dan bagi-Nya segala puji. Dia yang menghidupkan dan mematikan, Dia Maha Hidup dan tidak akan mati. Di tangan-Nya kebaikan, dan Dia Maha Kuasa atas segala sesuatu",
     "category": "ibadah"
   },
@@ -152,12 +152,28 @@
     "category": "keluarga"
   },
   {
+    "id": "ridha-allah-islam-rasul",
+    "title": "Doa Mohon Ridha Allah",
+    "arabicText": "رَضِيْتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِيْنًا وَبِمُحَمَّدٍ نَبِيًّا",
+    "latinText": "Radhiitu billaahi rabban, wa bil-islaami diinan, wa bi Muhammadin nabiyyan",
+    "translation": "Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad sebagai nabiku",
+    "category": "belajar"
+  },
+  {
     "id": "sebelum-belajar",
     "title": "Doa Sebelum Belajar",
     "arabicText": "رَبِّ زِدْنِيْ عِلْمًا وَارْزُقْنِيْ فَهْمًا وَاجْعَلْنِيْ مِنَ الصَّالِحِيْنَ",
     "latinText": "Rabbi zidnii 'ilman, warzuqnii fahman, waj'alnii minash-shoolihiin",
     "translation": "Ya Allah, tambahkanlah ilmuku, berikanlah aku pemahaman yang baik, dan jadikanlah aku termasuk orang-orang yang shaleh",
     "category": "belajar"
+  },
+  {
+    "id": "kebaikan-dunia-akhirat",
+    "title": "Doa Kebaikan Dunia dan Akhirat",
+    "arabicText": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+    "latinText": "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adzaaban-naar",
+    "translation": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta lindungilah kami dari azab neraka",
+    "category": "ibadah"
   },
   {
     "id": "setelah-belajar",
@@ -189,14 +205,6 @@
     "arabicText": "وَاجْعَلْهُ لَنَا حُجَّةً يَا رَبَّ الْعَالَمِيْنَ",
     "latinText": "Waj'alhu lanaa hujjatan, yaa rabbal 'aalamiin",
     "translation": "Dan jadikanlah ia sebagai hujjah (pegangan) bagi kami, wahai Tuhan semesta alam",
-    "category": "ibadah"
-  },
-  {
-    "id": "kebaikan-dunia-akhirat",
-    "title": "Doa Kebaikan Dunia dan Akhirat",
-    "arabicText": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-    "latinText": "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adzaaban-naar",
-    "translation": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta lindungilah kami dari azab neraka",
     "category": "ibadah"
   }
 ]
