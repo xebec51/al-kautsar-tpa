@@ -108,7 +108,10 @@ export function DetailPageLayout({
         </button>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <Typography as="h1" className="text-tv-3xl font-bold text-text-primary text-center">
+          <Typography
+            as="h1"
+            className="max-w-[70%] text-tv-4xl font-bold leading-tight text-text-primary text-center"
+          >
             {title}
           </Typography>
         </div>

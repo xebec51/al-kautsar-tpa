@@ -15,6 +15,7 @@ const config: Config = {
         'tv-xl': ['3rem', { lineHeight: '3.75rem' }],
         'tv-2xl': ['4rem', { lineHeight: '4.75rem' }],
         'tv-3xl': ['5rem', { lineHeight: '5.75rem' }],
+        'tv-4xl': ['5.75rem', { lineHeight: '6.5rem' }],
         'tv-arabic': ['6rem', { lineHeight: '1.6' }],
       },
       spacing: {
