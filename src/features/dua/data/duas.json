@@ -176,38 +176,6 @@
     "category": "ibadah"
   },
   {
-    "id": "setelah-belajar",
-    "title": "Doa Setelah Belajar",
-    "arabicText": "اَللَّهُمَّ أَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ وَأَرِنَا الْبَاطِلَ بَاطِلًا وَارْزُقْنَا اجْتِنَابَهُ",
-    "latinText": "Allaahumma arinal haqqa haqqan, warzuqnat tiba'ahu, wa arinal baatila baatilan, warzuqnaj tinabahu",
-    "translation": "Ya Allah, tunjukkanlah kepada kami kebenaran sebagai kebenaran dan karuniakanlah kami untuk mengikutinya, serta tunjukkanlah kepada kami kebatilan sebagai kebatilan dan karuniakanlah kami untuk menjauhinya",
-    "category": "belajar"
-  },
-  {
-    "id": "khatmil-quran-1",
-    "title": "Doa Khatmil Qur'an (1)",
-    "arabicText": "اَللَّهُمَّ ارْحَمْنَا بِالْقُرْآنِ وَاجْعَلْهُ لَنَا إِمَامًا وَنُوْرًا وَهُدًى وَرَحْمَةً",
-    "latinText": "Allaahummarhamna bilqur'aan, waj'alhu lanaa imaaman, wa nuuran, wa hudan, wa rahmah",
-    "translation": "Ya Allah, rahmatilah kami dengan Al-Qur'an, jadikanlah ia pemimpin, cahaya, petunjuk, dan rahmat bagi kami",
-    "category": "ibadah"
-  },
-  {
-    "id": "khatmil-quran-2",
-    "title": "Doa Khatmil Qur'an (2)",
-    "arabicText": "اَللَّهُمَّ ذَكِّرْنَا مِنْهُ مَا نَسِيْنَا وَعَلِّمْنَا مِنْهُ مَا جَهِلْنَا وَارْزُقْنَا تِلَاوَتَهُ آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ",
-    "latinText": "Allaahumma dzakkirnaa minhu maa nasiinaa, wa 'allimnaa minhu maa jahilnaa, warzuqnaa tilaawatahu aanaa'allaili wa athraafannahaar",
-    "translation": "Ya Allah, ingatkanlah kami akan yang telah kami lupakan, ajarkanlah yang belum kami ketahui, dan karuniakanlah kami untuk membacanya di waktu malam dan di ujung siang",
-    "category": "ibadah"
-  },
-  {
-    "id": "khatmil-quran-3",
-    "title": "Doa Khatmil Qur'an (3)",
-    "arabicText": "وَاجْعَلْهُ لَنَا حُجَّةً يَا رَبَّ الْعَالَمِيْنَ",
-    "latinText": "Waj'alhu lanaa hujjatan, yaa rabbal 'aalamiin",
-    "translation": "Dan jadikanlah ia sebagai hujjah (pegangan) bagi kami, wahai Tuhan semesta alam",
-    "category": "ibadah"
-  },
-  {
     "id": "sebelum-wudhu",
     "title": "Doa Sebelum Wudhu",
     "arabicText": "بِسْمِ اللَّهِ",
@@ -270,5 +238,37 @@
     "latinText": "Allaahumma 'aafinii fii badanii, Allaahumma 'aafinii fii sam'ii, Allaahumma 'aafinii fii basharii",
     "translation": "Ya Allah, sehatkanlah badanku, sehatkanlah pendengaranku, dan sehatkanlah penglihatanku",
     "category": "kesehatan"
+  },
+  {
+    "id": "setelah-belajar",
+    "title": "Doa Setelah Belajar",
+    "arabicText": "اَللَّهُمَّ أَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ وَأَرِنَا الْبَاطِلَ بَاطِلًا وَارْزُقْنَا اجْتِنَابَهُ",
+    "latinText": "Allaahumma arinal haqqa haqqan, warzuqnat tiba'ahu, wa arinal baatila baatilan, warzuqnaj tinabahu",
+    "translation": "Ya Allah, tunjukkanlah kepada kami kebenaran sebagai kebenaran dan karuniakanlah kami untuk mengikutinya, serta tunjukkanlah kepada kami kebatilan sebagai kebatilan dan karuniakanlah kami untuk menjauhinya",
+    "category": "belajar"
+  },
+  {
+    "id": "khatmil-quran-1",
+    "title": "Doa Khatmil Qur'an (1)",
+    "arabicText": "اَللَّهُمَّ ارْحَمْنَا بِالْقُرْآنِ وَاجْعَلْهُ لَنَا إِمَامًا وَنُوْرًا وَهُدًى وَرَحْمَةً",
+    "latinText": "Allaahummarhamna bilqur'aan, waj'alhu lanaa imaaman, wa nuuran, wa hudan, wa rahmah",
+    "translation": "Ya Allah, rahmatilah kami dengan Al-Qur'an, jadikanlah ia pemimpin, cahaya, petunjuk, dan rahmat bagi kami",
+    "category": "ibadah"
+  },
+  {
+    "id": "khatmil-quran-2",
+    "title": "Doa Khatmil Qur'an (2)",
+    "arabicText": "اَللَّهُمَّ ذَكِّرْنَا مِنْهُ مَا نَسِيْنَا وَعَلِّمْنَا مِنْهُ مَا جَهِلْنَا وَارْزُقْنَا تِلَاوَتَهُ آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ",
+    "latinText": "Allaahumma dzakkirnaa minhu maa nasiinaa, wa 'allimnaa minhu maa jahilnaa, warzuqnaa tilaawatahu aanaa'allaili wa athraafannahaar",
+    "translation": "Ya Allah, ingatkanlah kami akan yang telah kami lupakan, ajarkanlah yang belum kami ketahui, dan karuniakanlah kami untuk membacanya di waktu malam dan di ujung siang",
+    "category": "ibadah"
+  },
+  {
+    "id": "khatmil-quran-3",
+    "title": "Doa Khatmil Qur'an (3)",
+    "arabicText": "وَاجْعَلْهُ لَنَا حُجَّةً يَا رَبَّ الْعَالَمِيْنَ",
+    "latinText": "Waj'alhu lanaa hujjatan, yaa rabbal 'aalamiin",
+    "translation": "Dan jadikanlah ia sebagai hujjah (pegangan) bagi kami, wahai Tuhan semesta alam",
+    "category": "ibadah"
   }
 ]
