@@ -1,4 +1,4 @@
-export type MaterialCategory = 'hafalan' | 'fiqh' | 'akidah' | 'akhlak' | 'tahsin'
+export type MaterialCategory = 'quran' | 'hadis'
 
 export interface TpaMaterial {
   id: string

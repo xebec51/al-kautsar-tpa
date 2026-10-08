@@ -91,9 +91,7 @@ function PrayerTab({
   const [form, setForm] = useState<PrayerForm>(emptyPrayer)
   const [errors, setErrors] = useState<Partial<PrayerForm>>({})
 
-  const filtered = prayers.filter((p) =>
-    p.title.toLowerCase().includes(search.toLowerCase())
-  )
+  const filtered = prayers.filter((p) => p.title.toLowerCase().includes(search.toLowerCase()))
 
   function validate(): boolean {
     const e: Partial<PrayerForm> = {}
@@ -297,6 +295,10 @@ const DUA_CATEGORIES: DuaCategory[] = [
   'kendaraan',
   'masjid',
   'ibadah',
+  'belajar',
+  'keluarga',
+  'pakaian',
+  'kesehatan',
 ]
 
 const DUA_CATEGORY_LABELS: Record<DuaCategory, string> = {
@@ -307,6 +309,10 @@ const DUA_CATEGORY_LABELS: Record<DuaCategory, string> = {
   kendaraan: 'Kendaraan',
   masjid: 'Masjid',
   ibadah: 'Ibadah',
+  belajar: 'Belajar',
+  keluarga: 'Keluarga',
+  pakaian: 'Pakaian',
+  kesehatan: 'Kesehatan',
 }
 
 type DuaForm = Omit<Dua, 'id'>
@@ -541,21 +547,18 @@ function DuaTab({ duas, onChange }: { duas: Dua[]; onChange: (updated: Dua[]) =>
 
 // ─── Material tab ─────────────────────────────────────────────────────────────
 
-const MATERIAL_CATEGORIES: MaterialCategory[] = ['hafalan', 'fiqh', 'akidah', 'akhlak', 'tahsin']
+const MATERIAL_CATEGORIES: MaterialCategory[] = ['quran', 'hadis']
 
 const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
-  hafalan: 'Hafalan',
-  fiqh: 'Fiqh',
-  akidah: 'Akidah',
-  akhlak: 'Akhlak',
-  tahsin: 'Tahsin',
+  quran: 'Al-Qur’an',
+  hadis: 'Hadis',
 }
 
 type MaterialForm = Omit<TpaMaterial, 'id'>
 
 const emptyMaterial: MaterialForm = {
   title: '',
-  category: 'hafalan',
+  category: 'quran',
   arabicText: '',
   latinText: '',
   translation: '',
@@ -654,9 +657,7 @@ function MaterialTab({
         />
         <select
           value={categoryFilter}
-          onChange={(e) =>
-            setCategoryFilter(e.target.value as MaterialCategory | '')
-          }
+          onChange={(e) => setCategoryFilter(e.target.value as MaterialCategory | '')}
           className={selectCls + ' w-36'}
         >
           <option value="">Semua Kategori</option>
@@ -698,9 +699,7 @@ function MaterialTab({
               <select
                 className={selectCls}
                 value={form.category}
-                onChange={(e) =>
-                  setForm({ ...form, category: e.target.value as MaterialCategory })
-                }
+                onChange={(e) => setForm({ ...form, category: e.target.value as MaterialCategory })}
               >
                 {MATERIAL_CATEGORIES.map((c) => (
                   <option key={c} value={c}>
@@ -711,8 +710,8 @@ function MaterialTab({
             </Field>
           </div>
           <p className="text-xs text-neutral-500">
-            Isi Teks Arab untuk materi hafalan surah/doa. Isi Konten Teks untuk materi fiqh,
-            akidah, atau akhlak.
+            Isi Teks Arab untuk hafalan hadis. Isi Konten Teks untuk daftar target hafalan
+            Al-Qur’an.
           </p>
           <Field label="Teks Arab (opsional)">
             <textarea
@@ -819,7 +818,7 @@ type Tab = 'prayers' | 'duas' | 'materials'
 const TAB_LABELS: Record<Tab, string> = {
   prayers: 'Bacaan Shalat',
   duas: 'Doa Harian',
-  materials: 'Materi TPA',
+  materials: 'Hafalan Al-Qur’an dan Hadis',
 }
 
 export function AdminPage() {
@@ -828,9 +827,7 @@ export function AdminPage() {
   const [prayers, setPrayers] = useState<Prayer[]>(() =>
     loadStored<Prayer>('admin:prayers', defaultPrayers as Prayer[])
   )
-  const [duas, setDuas] = useState<Dua[]>(() =>
-    loadStored<Dua>('admin:duas', defaultDuas as Dua[])
-  )
+  const [duas, setDuas] = useState<Dua[]>(() => loadStored<Dua>('admin:duas', defaultDuas as Dua[]))
   const [materials, setMaterials] = useState<TpaMaterial[]>(() =>
     loadStored<TpaMaterial>('admin:materials', defaultMaterials as TpaMaterial[])
   )
@@ -868,9 +865,7 @@ export function AdminPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-xl font-bold">Admin Dashboard</h1>
-            <p className="text-xs text-neutral-500 mt-1">
-              Al-Kautsar TPA — Manajemen Konten
-            </p>
+            <p className="text-xs text-neutral-500 mt-1">Al-Kautsar TPA — Manajemen Konten</p>
           </div>
           <button
             onClick={handleReset}
@@ -899,12 +894,8 @@ export function AdminPage() {
         </div>
 
         {/* Tab content */}
-        {activeTab === 'prayers' && (
-          <PrayerTab prayers={prayers} onChange={handlePrayersChange} />
-        )}
-        {activeTab === 'duas' && (
-          <DuaTab duas={duas} onChange={handleDuasChange} />
-        )}
+        {activeTab === 'prayers' && <PrayerTab prayers={prayers} onChange={handlePrayersChange} />}
+        {activeTab === 'duas' && <DuaTab duas={duas} onChange={handleDuasChange} />}
         {activeTab === 'materials' && (
           <MaterialTab materials={materials} onChange={handleMaterialsChange} />
         )}

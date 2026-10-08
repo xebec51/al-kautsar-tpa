@@ -4,15 +4,18 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { Typography } from '@/components/ui/Typography'
 import materials from '../data/materials.json'
+import type { TpaMaterial } from '../types'
+
+const materialList = materials as TpaMaterial[]
 
 export function MaterialDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
 
-  const currentIndex = materials.findIndex((m) => m.id === id)
-  const material = materials[currentIndex]
-  const prev = currentIndex > 0 ? materials[currentIndex - 1] : null
-  const next = currentIndex < materials.length - 1 ? materials[currentIndex + 1] : null
+  const currentIndex = materialList.findIndex((m) => m.id === id)
+  const material = materialList[currentIndex]
+  const prev = currentIndex > 0 ? materialList[currentIndex - 1] : null
+  const next = currentIndex < materialList.length - 1 ? materialList[currentIndex + 1] : null
 
   if (!material) {
     return (
@@ -28,7 +31,7 @@ export function MaterialDetailPage() {
   return (
     <DetailPageLayout
       title={material.title}
-      position={{ current: currentIndex + 1, total: materials.length }}
+      position={{ current: currentIndex + 1, total: materialList.length }}
       arabicText={material.arabicText}
       latinText={material.latinText}
       translation={material.translation}

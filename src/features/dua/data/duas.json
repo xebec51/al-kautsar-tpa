@@ -90,9 +90,9 @@
   {
     "id": "bercermin",
     "title": "Doa Bercermin",
-    "arabicText": "اَللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِيْ فَحَسِّنْ خُلُقِيْ",
-    "latinText": "Allaahumma kamaa hassanta kholqii fahassin khuluqii",
-    "translation": "Ya Allah, sebagaimana Engkau telah memperindah rupaku, maka perindahlah pula akhlakku",
+    "arabicText": "اَلْحَمْدُ لِلَّهِ، اَللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِيْ فَحَسِّنْ خُلُقِيْ",
+    "latinText": "Alhamdulillaah. Allaahumma kamaa hassanta khalqii fahassin khuluqii",
+    "translation": "Segala puji bagi Allah. Ya Allah, sebagaimana Engkau telah menciptakanku dengan baik, maka perbaikilah akhlakku",
     "category": "ibadah"
   },
   {
@@ -129,7 +129,7 @@
   },
   {
     "id": "ketika-hujan",
-    "title": "Doa Ketika Hujan",
+    "title": "Doa Turun Hujan",
     "arabicText": "اَللَّهُمَّ صَيِّبًا نَافِعًا",
     "latinText": "Allaahumma shayyiban naafi'an",
     "translation": "Ya Allah, jadikanlah hujan ini hujan yang bermanfaat",
@@ -152,19 +152,19 @@
     "category": "keluarga"
   },
   {
-  "id": "ridha-allah-islam-rasul",
-  "title": "Doa Mohon Ridha Allah",
-  "arabicText": "رَضِيْتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِيْنًا وَبِمُحَمَّدٍ نَبِيًّا وَرَسُوْلًا",
-  "latinText": "Radhiitu billaahi rabban, wa bil-islaami diinan, wa bi Muhammadin nabiyyan wa rasuulan",
-  "translation": "Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad sebagai nabi dan rasulku",
-  "category": "belajar"
+    "id": "ridha-allah-islam-rasul",
+    "title": "Doa Mohon Ridha Allah",
+    "arabicText": "رَضِيْتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِيْنًا وَبِمُحَمَّدٍ نَبِيًّا وَرَسُوْلًا",
+    "latinText": "Radhiitu billaahi rabban, wa bil-islaami diinan, wa bi Muhammadin nabiyyan wa rasuulan",
+    "translation": "Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad sebagai nabi dan rasulku",
+    "category": "belajar"
   },
   {
     "id": "sebelum-belajar",
     "title": "Doa Sebelum Belajar",
-    "arabicText": "رَبِّ زِدْنِيْ عِلْمًا وَارْزُقْنِيْ فَهْمًا وَاجْعَلْنِيْ مِنَ الصَّالِحِيْنَ",
-    "latinText": "Rabbi zidnii 'ilman, warzuqnii fahman, waj'alnii minash-shoolihiin",
-    "translation": "Ya Allah, tambahkanlah ilmuku, berikanlah aku pemahaman yang baik, dan jadikanlah aku termasuk orang-orang yang shaleh",
+    "arabicText": "رَبِّ زِدْنِيْ عِلْمًا نَافِعًا وَارْزُقْنِيْ فَهْمًا وَاسِعًا",
+    "latinText": "Rabbi zidnii 'ilman naafi'an warzuqnii fahman waasi'an",
+    "translation": "Ya Allah, tambahkanlah ilmu yang bermanfaat padaku dan berilah pemahaman yang luas kepadaku",
     "category": "belajar"
   },
   {
@@ -206,5 +206,69 @@
     "latinText": "Waj'alhu lanaa hujjatan, yaa rabbal 'aalamiin",
     "translation": "Dan jadikanlah ia sebagai hujjah (pegangan) bagi kami, wahai Tuhan semesta alam",
     "category": "ibadah"
+  },
+  {
+    "id": "sebelum-wudhu",
+    "title": "Doa Sebelum Wudhu",
+    "arabicText": "بِسْمِ اللَّهِ",
+    "latinText": "Bismillaah",
+    "translation": "Dengan menyebut nama Allah",
+    "category": "ibadah"
+  },
+  {
+    "id": "naik-kendaraan-laut",
+    "title": "Doa Naik Kendaraan Laut",
+    "arabicText": "بِسْمِ اللَّهِ مَجْرَاهَا وَمُرْسَاهَا إِنَّ رَبِّيْ لَغَفُوْرٌ رَحِيْمٌ",
+    "latinText": "Bismillaahi majraahaa wa mursaahaa, inna rabbii laghafuurur rahiim",
+    "translation": "Dengan nama Allah pada waktu berlayar dan berlabuhnya. Sesungguhnya Tuhanku benar-benar Maha Pengampun lagi Maha Penyayang",
+    "category": "kendaraan"
+  },
+  {
+    "id": "lapang-dada",
+    "title": "Doa Mohon Kelapangan Dada",
+    "arabicText": "رَبِّ اشْرَحْ لِيْ صَدْرِيْ وَيَسِّرْ لِيْ أَمْرِيْ وَاحْلُلْ عُقْدَةً مِنْ لِسَانِيْ يَفْقَهُوْا قَوْلِيْ",
+    "latinText": "Rabbisyrah lii shadrii wa yassir lii amrii, wahlul 'uqdatan min lisaanii yafqahuu qaulii",
+    "translation": "Ya Allah, lapangkanlah dadaku, mudahkanlah urusanku, dan hilangkanlah kekakuan pada lidahku agar mereka memahami perkataanku",
+    "category": "belajar"
+  },
+  {
+    "id": "berpakaian",
+    "title": "Doa Berpakaian",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا هُوَ لَهُ وَأَعُوْذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا هُوَ لَهُ",
+    "latinText": "Allaahumma innii as-aluka min khairihi wa khairi maa huwa lahu, wa a'uudzu bika min syarrihi wa syarri maa huwa lahu",
+    "translation": "Ya Allah, aku memohon kepada-Mu kebaikan pakaian ini dan kebaikan sesuatu yang ada padanya. Aku berlindung kepada-Mu dari keburukan pakaian ini dan keburukan sesuatu yang ada padanya",
+    "category": "pakaian"
+  },
+  {
+    "id": "melepas-pakaian",
+    "title": "Doa Melepas Pakaian",
+    "arabicText": "بِسْمِ اللَّهِ الَّذِيْ لَا إِلَهَ إِلَّا هُوَ",
+    "latinText": "Bismillaahil ladzii laa ilaaha illaa huwa",
+    "translation": "Dengan nama Allah yang tiada Tuhan selain Dia",
+    "category": "pakaian"
+  },
+  {
+    "id": "ilmu-rezeki-kesembuhan",
+    "title": "Doa Mohon Ilmu, Rezeki, dan Kesembuhan",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ",
+    "latinText": "Allaahumma innii as-aluka 'ilman naafi'an wa rizqan waasi'an wa syifaa-an min kulli daa-in",
+    "translation": "Ya Allah, aku memohon kepada-Mu ilmu yang berguna, rezeki yang luas, dan kesembuhan dari segala penyakit",
+    "category": "kesehatan"
+  },
+  {
+    "id": "menjelang-pagi",
+    "title": "Doa Menjelang Pagi",
+    "arabicText": "اَللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوْتُ وَإِلَيْكَ النُّشُوْرُ",
+    "latinText": "Allaahumma bika ashbahnaa wa bika amsainaa wa bika nahyaa wa bika namuutu wa ilaikan nusyuur",
+    "translation": "Ya Allah, dengan rahmat-Mu kami memasuki waktu pagi, dengan rahmat-Mu kami memasuki waktu petang, dengan rahmat-Mu kami hidup, dengan kehendak-Mu kami mati, dan hanya kepada-Mu kami dibangkitkan",
+    "category": "ibadah"
+  },
+  {
+    "id": "meminta-kesehatan",
+    "title": "Doa Meminta Kesehatan",
+    "arabicText": "اَللَّهُمَّ عَافِنِيْ فِيْ بَدَنِيْ اَللَّهُمَّ عَافِنِيْ فِيْ سَمْعِيْ اَللَّهُمَّ عَافِنِيْ فِيْ بَصَرِيْ",
+    "latinText": "Allaahumma 'aafinii fii badanii, Allaahumma 'aafinii fii sam'ii, Allaahumma 'aafinii fii basharii",
+    "translation": "Ya Allah, sehatkanlah badanku, sehatkanlah pendengaranku, dan sehatkanlah penglihatanku",
+    "category": "kesehatan"
   }
 ]

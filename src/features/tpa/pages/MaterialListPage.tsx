@@ -6,11 +6,8 @@ import { Container } from '@/components/ui/Container'
 import materials from '../data/materials.json'
 
 const CATEGORY_LABELS: Record<string, string> = {
-  hafalan: 'Hafalan',
-  fiqh: 'Fiqh',
-  akidah: 'Akidah',
-  akhlak: 'Akhlak',
-  tahsin: 'Tahsin',
+  quran: 'Al-Qur’an',
+  hadis: 'Hadis',
 }
 
 export function MaterialListPage() {
@@ -22,7 +19,7 @@ export function MaterialListPage() {
         <Button id="material-list-back" variant="ghost" onClick={() => navigate('/')}>
           ← Kembali
         </Button>
-        <Typography variant="heading">Materi TPA</Typography>
+        <Typography variant="heading">Hafalan Al-Qur’an dan Hadis</Typography>
       </div>
 
       <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide py-3 px-3">

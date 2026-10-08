@@ -20,9 +20,9 @@ const menuItems = [
   },
   {
     id: 'menu-material',
-    arabicLabel: 'الْعِلْمُ',
-    title: 'Materi TPA',
-    description: 'Materi pembelajaran santri',
+    arabicLabel: 'الْقُرْآنُ وَالْحَدِيثُ',
+    title: 'Hafalan Al-Qur’an dan Hadis',
+    description: 'Target hafalan Al-Qur’an dan hadis',
     route: '/material',
   },
 ]

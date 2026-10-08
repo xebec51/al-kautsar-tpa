@@ -1,4 +1,15 @@
-export type DuaCategory = 'makan' | 'tidur' | 'rumah' | 'kamar-mandi' | 'kendaraan' | 'masjid' | 'ibadah'
+export type DuaCategory =
+  | 'makan'
+  | 'tidur'
+  | 'rumah'
+  | 'kamar-mandi'
+  | 'kendaraan'
+  | 'masjid'
+  | 'ibadah'
+  | 'belajar'
+  | 'keluarga'
+  | 'pakaian'
+  | 'kesehatan'
 
 export interface Dua {
   id: string
