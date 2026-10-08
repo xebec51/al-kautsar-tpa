@@ -1,9 +1,12 @@
 import { createContext } from 'react'
 
 export interface FontSettings {
+  titleSize: number
   arabicSize: number
   latinSize: number
   meaningSize: number
+  increaseTitleSize: () => void
+  decreaseTitleSize: () => void
   increaseArabicSize: () => void
   decreaseArabicSize: () => void
   increaseLatinSize: () => void
@@ -11,6 +14,11 @@ export interface FontSettings {
   increaseMeaningSize: () => void
   decreaseMeaningSize: () => void
 }
+
+export const TITLE_STEP = 4
+export const TITLE_MIN = 28
+export const TITLE_MAX = 72
+export const TITLE_DEFAULT = 40
 
 export const ARABIC_STEP = 8
 export const ARABIC_MIN = 40

@@ -33,10 +33,8 @@ export function DetailPageLayout({
   onPrev,
   onNext,
 }: DetailPageLayoutProps) {
-  const { latinSize, meaningSize } = useFontSettings()
+  const { titleSize, latinSize, meaningSize } = useFontSettings()
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-  const titleSizeClass =
-    title.length > 34 ? 'text-tv-lg' : title.length > 22 ? 'text-tv-xl' : 'text-tv-2xl'
 
   // Stable refs for callbacks
   const onBackRef = useRef(onBack)
@@ -112,7 +110,8 @@ export function DetailPageLayout({
         </div>
 
         <h1
-          className={`${titleSizeClass} min-w-0 font-bold leading-tight text-text-primary text-center text-balance`}
+          style={{ fontSize: `${titleSize}px` }}
+          className="min-w-0 font-bold leading-tight text-text-primary text-center text-balance transition-all duration-300 ease-in-out"
         >
           {title}
         </h1>

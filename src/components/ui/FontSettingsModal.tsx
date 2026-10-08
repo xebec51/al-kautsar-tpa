@@ -11,6 +11,7 @@ const MODAL_GRID: string[][] = [
   ['font-modal-arabic-dec', 'font-modal-arabic-inc'],
   ['font-modal-latin-dec', 'font-modal-latin-inc'],
   ['font-modal-meaning-dec', 'font-modal-meaning-inc'],
+  ['font-modal-title-dec', 'font-modal-title-inc'],
   ['font-modal-close'],
 ]
 
@@ -85,9 +86,12 @@ interface FontSettingsModalProps {
 
 export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
   const {
+    titleSize,
     arabicSize,
     latinSize,
     meaningSize,
+    increaseTitleSize,
+    decreaseTitleSize,
     increaseArabicSize,
     decreaseArabicSize,
     increaseLatinSize,
@@ -159,15 +163,13 @@ export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
       <div
         className={cn(
-          'bg-panel border border-border rounded-tv-xl p-tv-8 w-[660px] shadow-tv-panel transition-all duration-300 ease-out',
+          'bg-panel border border-border rounded-tv-xl p-tv-6 w-[660px] shadow-tv-panel transition-all duration-300 ease-out',
           visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         )}
       >
-        <h2 className="text-tv-lg font-bold text-text-primary mb-tv-6">
-          Pengaturan Ukuran Font
-        </h2>
+        <h2 className="text-tv-lg font-bold text-text-primary mb-tv-4">Pengaturan Ukuran Font</h2>
 
-        <div className="flex flex-col gap-tv-4">
+        <div className="flex flex-col gap-tv-3">
           <SettingsRow
             label="Bahasa Arab"
             value={arabicSize}
@@ -192,9 +194,17 @@ export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
             onDecrease={decreaseMeaningSize}
             onIncrease={increaseMeaningSize}
           />
+          <SettingsRow
+            label="Judul Halaman"
+            value={titleSize}
+            decId="font-modal-title-dec"
+            incId="font-modal-title-inc"
+            onDecrease={decreaseTitleSize}
+            onIncrease={increaseTitleSize}
+          />
         </div>
 
-        <div className="mt-tv-6 flex justify-center">
+        <div className="mt-tv-4 flex justify-center">
           <FocusRing active={closeBtn.isFocused} className="rounded-tv">
             <button
               ref={closeBtn.ref}
