@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { ArabicText } from '@/components/ui/ArabicText'
 import { FocusRing } from '@/components/ui/FocusRing'
 import { FontSettingsModal } from '@/components/ui/FontSettingsModal'
-import { Typography } from '@/components/ui/Typography'
 import { useFontSettings } from '@/contexts/useFontSettings'
 import { useFocusable } from '@/navigation/useFocusable'
 import { normalizeRemoteKey } from '@/navigation/RemoteKeyMap'
@@ -36,6 +35,8 @@ export function DetailPageLayout({
 }: DetailPageLayoutProps) {
   const { latinSize, meaningSize } = useFontSettings()
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+  const titleSizeClass =
+    title.length > 34 ? 'text-tv-xl' : title.length > 22 ? 'text-tv-2xl' : 'text-tv-3xl'
 
   // Stable refs for callbacks
   const onBackRef = useRef(onBack)
@@ -54,9 +55,11 @@ export function DetailPageLayout({
   }, [isSettingsOpen])
 
   // "Aa" settings button in header
-  const { ref: aaRef, isFocused: aaFocused, focusSelf: focusAaBtn } = useFocusable<HTMLButtonElement>(
-    'detail-font-settings-btn'
-  )
+  const {
+    ref: aaRef,
+    isFocused: aaFocused,
+    focusSelf: focusAaBtn,
+  } = useFocusable<HTMLButtonElement>('detail-font-settings-btn')
 
   const closeModal = () => {
     setIsSettingsOpen(false)
@@ -98,39 +101,38 @@ export function DetailPageLayout({
 
   return (
     <div className="w-full h-full flex flex-col">
-      {/* Header: Kembali left | title absolutely centered | Aa+counter right */}
-      <div className="relative flex items-center justify-between px-[4%] pt-tv-4 pb-tv-2 shrink-0">
-        <button
-          onClick={onBack}
-          className="relative z-10 text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
-        >
-          ← Kembali
-        </button>
-
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <Typography
-            as="h1"
-            className="max-w-[70%] text-tv-4xl font-bold leading-tight text-text-primary text-center"
+      <header className="grid grid-cols-[1fr_minmax(0,3fr)_1fr] items-center gap-tv-4 px-[4%] pt-tv-4 pb-tv-3 shrink-0 border-b border-border">
+        <div className="flex justify-start">
+          <button
+            onClick={onBack}
+            className="text-tv-xs font-medium text-text-secondary cursor-pointer hover:text-text-primary transition-colors"
           >
-            {title}
-          </Typography>
+            ← Kembali
+          </button>
         </div>
 
-        <div className="relative z-10 flex items-center gap-tv-3">
+        <h1
+          className={`${titleSizeClass} min-w-0 font-bold leading-tight text-text-primary text-center text-balance`}
+        >
+          {title}
+        </h1>
+
+        <div className="flex items-center justify-end gap-tv-3">
+          <span className="text-tv-xs font-medium text-text-muted tabular-nums">
+            {position.current} / {position.total}
+          </span>
           <FocusRing active={aaFocused} className="rounded-tv-sm">
             <button
               ref={aaRef}
               onClick={() => setIsSettingsOpen(true)}
-              className="px-tv-3 py-tv-2 bg-overlay border border-border rounded-tv-sm text-tv-sm font-bold text-text-secondary cursor-pointer"
+              className="min-w-20 px-tv-3 py-tv-2 bg-overlay border border-border rounded-tv-sm text-tv-xs font-bold text-text-secondary cursor-pointer"
+              aria-label="Pengaturan ukuran teks"
             >
               Aa
             </button>
           </FocusRing>
-          <span className="text-tv-sm text-text-muted">
-            {position.current} / {position.total}
-          </span>
         </div>
-      </div>
+      </header>
 
       {/*
         Content: smart vertical centering via double flex-1 spacers.
@@ -138,48 +140,54 @@ export function DetailPageLayout({
         - Long content: spacers shrink to 0 (min-h-0) → content starts at top,
           overflow clipped at bottom. First line is always visible.
       */}
-      <div className="flex-1 min-h-0 overflow-hidden px-[4%] flex flex-col">
+      <main className="flex-1 min-h-0 overflow-hidden px-[5%] flex flex-col">
         <div className="flex-1 min-h-0" />
 
         {arabicText ? (
-          <div className="flex flex-col gap-tv-4 py-tv-4">
+          <div className="w-full max-w-[92rem] mx-auto flex flex-col gap-tv-3 py-tv-3">
             <ArabicText text={arabicText} />
-            {latinText && (
-              <p
-                style={{ fontSize: `${latinSize}px` }}
-                className="italic text-text-secondary text-center transition-all duration-300 ease-in-out"
-              >
-                {latinText}
-              </p>
-            )}
-            {translation && (
-              <p
-                style={{ fontSize: `${meaningSize}px` }}
-                className="text-text-secondary text-center transition-all duration-300 ease-in-out"
-              >
-                {translation}
-              </p>
+
+            {(latinText || translation) && (
+              <div className="w-full max-w-[84rem] mx-auto pt-tv-3 border-t border-border flex flex-col gap-tv-2">
+                {latinText && (
+                  <p
+                    style={{ fontSize: `${latinSize}px` }}
+                    className="italic leading-relaxed text-text-secondary text-center transition-all duration-300 ease-in-out"
+                  >
+                    {latinText}
+                  </p>
+                )}
+                {translation && (
+                  <p
+                    style={{ fontSize: `${meaningSize}px` }}
+                    className="leading-relaxed text-text-primary text-center transition-all duration-300 ease-in-out"
+                  >
+                    {translation}
+                  </p>
+                )}
+              </div>
             )}
           </div>
         ) : content ? (
-          <div className="py-tv-4">
-            <p className="text-tv-base text-text-primary whitespace-pre-wrap leading-relaxed">
+          <div className="w-full max-w-[72rem] mx-auto py-tv-4">
+            <p className="text-tv-base text-text-primary whitespace-pre-wrap leading-relaxed text-center">
               {content}
             </p>
           </div>
         ) : null}
 
         <div className="flex-1 min-h-0" />
-      </div>
+      </main>
 
-      {/* Footer: navigation buttons */}
-      <div className="flex items-center justify-between px-[4%] pb-tv-4 shrink-0">
+      {/* Keep navigation available without competing with the current title. */}
+      <footer className="grid grid-cols-2 items-center gap-tv-4 px-[4%] pb-tv-3 shrink-0">
         {prevTitle ? (
           <button
             onClick={onPrev}
-            className="text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
+            aria-label={`Bacaan sebelumnya: ${prevTitle}`}
+            className="justify-self-start text-tv-xs font-medium text-text-muted cursor-pointer hover:text-text-secondary transition-colors"
           >
-            ↑ {prevTitle}
+            ↑ Sebelumnya
           </button>
         ) : (
           <span />
@@ -187,14 +195,15 @@ export function DetailPageLayout({
         {nextTitle ? (
           <button
             onClick={onNext}
-            className="text-tv-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors"
+            aria-label={`Bacaan berikutnya: ${nextTitle}`}
+            className="justify-self-end text-tv-xs font-medium text-text-muted cursor-pointer hover:text-text-secondary transition-colors"
           >
-            {nextTitle} ↓
+            Berikutnya ↓
           </button>
         ) : (
           <span />
         )}
-      </div>
+      </footer>
 
       {isSettingsOpen && <FontSettingsModal onClose={closeModal} />}
     </div>
