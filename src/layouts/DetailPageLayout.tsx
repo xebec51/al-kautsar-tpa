@@ -36,7 +36,7 @@ export function DetailPageLayout({
   const { latinSize, meaningSize } = useFontSettings()
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
   const titleSizeClass =
-    title.length > 34 ? 'text-tv-xl' : title.length > 22 ? 'text-tv-2xl' : 'text-tv-3xl'
+    title.length > 34 ? 'text-tv-lg' : title.length > 22 ? 'text-tv-xl' : 'text-tv-2xl'
 
   // Stable refs for callbacks
   const onBackRef = useRef(onBack)
