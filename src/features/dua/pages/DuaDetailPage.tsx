@@ -27,6 +27,7 @@ export function DuaDetailPage() {
 
   return (
     <DetailPageLayout
+      settingsKey={`dua:${dua.id}`}
       title={dua.title}
       position={{ current: currentIndex + 1, total: duas.length }}
       arabicText={dua.arabicText}

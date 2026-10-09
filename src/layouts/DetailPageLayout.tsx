@@ -7,6 +7,7 @@ import { useFocusable } from '@/navigation/useFocusable'
 import { normalizeRemoteKey } from '@/navigation/RemoteKeyMap'
 
 interface DetailPageLayoutProps {
+  settingsKey: string
   title: string
   position: { current: number; total: number }
   arabicText?: string
@@ -21,6 +22,7 @@ interface DetailPageLayoutProps {
 }
 
 export function DetailPageLayout({
+  settingsKey,
   title,
   position,
   arabicText,
@@ -33,7 +35,8 @@ export function DetailPageLayout({
   onPrev,
   onNext,
 }: DetailPageLayoutProps) {
-  const { titleSize, latinSize, meaningSize } = useFontSettings()
+  const { getItemSizes } = useFontSettings()
+  const { titleSize, arabicSize, latinSize, meaningSize } = getItemSizes(settingsKey)
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
 
   // Stable refs for callbacks
@@ -144,10 +147,10 @@ export function DetailPageLayout({
 
         {arabicText ? (
           <div className="w-full max-w-[92rem] mx-auto flex flex-col gap-tv-3 py-tv-3">
-            <ArabicText text={arabicText} />
+            <ArabicText text={arabicText} fontSize={arabicSize} />
 
             {(latinText || translation) && (
-              <div className="w-full max-w-[84rem] mx-auto pt-tv-3 border-t border-border flex flex-col gap-tv-2">
+              <div className="w-full max-w-[84rem] mx-auto pt-tv-2 flex flex-col gap-tv-2">
                 {latinText && (
                   <p
                     style={{ fontSize: `${latinSize}px` }}
@@ -204,7 +207,7 @@ export function DetailPageLayout({
         )}
       </footer>
 
-      {isSettingsOpen && <FontSettingsModal onClose={closeModal} />}
+      {isSettingsOpen && <FontSettingsModal settingsKey={settingsKey} onClose={closeModal} />}
     </div>
   )
 }

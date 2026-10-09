@@ -10,6 +10,7 @@
     "title": "Kasih Sayang",
     "category": "hadis",
     "arabicText": "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ",
+    "latinText": "Man laa yarham laa yurham",
     "translation": "Siapa yang tidak menyayangi, maka tidak akan disayangi. (HR. Bukhari dan Muslim)"
   },
   {
@@ -17,6 +18,7 @@
     "title": "Menuntut Ilmu",
     "category": "hadis",
     "arabicText": "طَلَبُ الْعِلْمِ فَرِيْضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+    "latinText": "Thalabul 'ilmi fariidhatun 'alaa kulli muslimin",
     "translation": "Menuntut ilmu wajib bagi setiap orang Islam. (HR. Muslim)"
   },
   {
@@ -24,6 +26,7 @@
     "title": "Larangan Minum Berdiri",
     "category": "hadis",
     "arabicText": "لَا يَشْرَبَنَّ أَحَدُكُمْ قَائِمًا",
+    "latinText": "Laa yasyrabanna ahadukum qaa'iman",
     "translation": "Janganlah seorang dari kalian minum sambil berdiri. (HR. Muslim)"
   },
   {
@@ -31,6 +34,7 @@
     "title": "Shalat Tiang Agama",
     "category": "hadis",
     "arabicText": "اَلصَّلَاةُ عِمَادُ الدِّيْنِ",
+    "latinText": "Ash-shalaatu 'imaadud diin",
     "translation": "Shalat itu tiang agama. (HR. Bukhari dan Muslim)"
   },
   {
@@ -38,6 +42,7 @@
     "title": "Kebersihan",
     "category": "hadis",
     "arabicText": "اَلطُّهُوْرُ شَطْرُ الْإِيْمَانِ",
+    "latinText": "Ath-thuhuuru syathrul iimaan",
     "translation": "Kebersihan itu sebagian dari iman. (HR. Muslim)"
   },
   {
@@ -51,6 +56,7 @@
     "title": "Jangan Marah",
     "category": "hadis",
     "arabicText": "لَا تَغْضَبْ وَلَكَ الْجَنَّةُ",
+    "latinText": "Laa taghdhab wa lakal jannah",
     "translation": "Jangan marah, bagimu surga. (HR. Thabrani)"
   },
   {
@@ -58,6 +64,7 @@
     "title": "Keutamaan Belajar Al-Qur’an",
     "category": "hadis",
     "arabicText": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+    "latinText": "Khairukum man ta'allamal Qur'aana wa 'allamahu",
     "translation": "Sebaik-baik kalian adalah yang belajar Al-Qur’an dan mengajarkannya. (HR. Bukhari)"
   },
   {
@@ -65,6 +72,7 @@
     "title": "Persaudaraan",
     "category": "hadis",
     "arabicText": "اَلْمُسْلِمُ أَخُو الْمُسْلِمِ لَا يَظْلِمُهُ وَلَا يُسْلِمُهُ",
+    "latinText": "Al-muslimu akhul muslimi laa yazhlimuhu wa laa yuslimuhu",
     "translation": "Muslim itu saudara bagi muslim lainnya; ia tidak boleh menganiayanya atau membiarkannya teraniaya. (HR. Bukhari dan Muslim)"
   },
   {
@@ -72,6 +80,7 @@
     "title": "Berkata yang Baik",
     "category": "hadis",
     "arabicText": "قُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+    "latinText": "Qul khairan au liyashmut",
     "translation": "Berkatalah yang baik atau diam. (HR. Bukhari dan Muslim)"
   },
   {
@@ -85,6 +94,7 @@
     "title": "Saling Memberi Hadiah",
     "category": "hadis",
     "arabicText": "تَهَادَوْا تَحَابُّوْا",
+    "latinText": "Tahaadau tahaabbuu",
     "translation": "Saling memberi hadiahlah, maka kalian akan saling menyayangi. (HR. Bukhari)"
   },
   {
@@ -92,6 +102,7 @@
     "title": "Niat",
     "category": "hadis",
     "arabicText": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ",
+    "latinText": "Innamal a'maalu bin-niyyaat",
     "translation": "Sesungguhnya amal itu tergantung pada niat. (HR. Bukhari dan Muslim)"
   },
   {
@@ -99,6 +110,7 @@
     "title": "Tersenyum",
     "category": "hadis",
     "arabicText": "تَبَسُّمُكَ فِيْ وَجْهِ أَخِيْكَ صَدَقَةٌ",
+    "latinText": "Tabassumuka fii wajhi akhiika shadaqah",
     "translation": "Senyummu di hadapan saudaramu adalah sedekah. (HR. Tirmidzi)"
   },
   {
@@ -106,6 +118,7 @@
     "title": "Larangan Menakut-nakuti",
     "category": "hadis",
     "arabicText": "لَا يَحِلُّ لِمُسْلِمٍ أَنْ يُرَوِّعَ مُسْلِمًا",
+    "latinText": "Laa yahillu limuslimin an yurawwi'a musliman",
     "translation": "Tidak dihalalkan bagi seorang muslim menakut-nakuti sesama muslim. (HR. Abu Dawud)"
   },
   {
@@ -119,6 +132,7 @@
     "title": "Berbuat Baik",
     "category": "hadis",
     "arabicText": "كُلُّ مَعْرُوْفٍ صَدَقَةٌ",
+    "latinText": "Kullu ma'ruufin shadaqah",
     "translation": "Setiap kebaikan adalah sedekah. (HR. Muslim)"
   },
   {
@@ -126,6 +140,7 @@
     "title": "Menutup Aurat",
     "category": "hadis",
     "arabicText": "إِنَّا نُهِيْنَا أَنْ تُرَى عَوْرَاتُنَا",
+    "latinText": "Innaa nuhiinaa an turaa 'auraatuna",
     "translation": "Sesungguhnya kita dilarang menampakkan aurat kita. (HR. Imam Ahmad)"
   },
   {
@@ -133,6 +148,7 @@
     "title": "Manusia Terbaik",
     "category": "hadis",
     "arabicText": "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ",
+    "latinText": "Khairun naasi anfa'uhum lin-naas",
     "translation": "Sebaik-baik manusia adalah yang bermanfaat bagi sesamanya. (HR. Ahmad dan Ath-Thabrani)"
   },
   {
@@ -140,6 +156,7 @@
     "title": "Kedudukan Pencela",
     "category": "hadis",
     "arabicText": "لَا يَدْخُلُ الْجَنَّةَ نَمَّامٌ",
+    "latinText": "Laa yadkhulul jannata nammaamun",
     "translation": "Tidak akan masuk surga orang yang suka menghasut. (HR. Muslim)"
   },
   {
@@ -153,6 +170,7 @@
     "title": "Cinta Saudara",
     "category": "hadis",
     "arabicText": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيْهِ مَا يُحِبُّ لِنَفْسِهِ",
+    "latinText": "Laa yu'minu ahadukum hattaa yuhibba li akhiihi maa yuhibbu linafsihi",
     "translation": "Tidak sempurna iman seseorang hingga ia mencintai saudaranya sebagaimana ia mencintai dirinya sendiri. (HR. Bukhari dan Muslim)"
   },
   {
@@ -160,6 +178,7 @@
     "title": "Lemah Lembut",
     "category": "hadis",
     "arabicText": "إِنَّ اللَّهَ يُحِبُّ الرِّفْقَ فِي الْأَمْرِ كُلِّهِ",
+    "latinText": "Innallaaha yuhibbur rifqa fil amri kullihi",
     "translation": "Sesungguhnya Allah menyukai kelembutan dalam semua urusan. (HR. Bukhari)"
   },
   {
@@ -167,6 +186,7 @@
     "title": "Tenang dan Tidak Tergesa-gesa",
     "category": "hadis",
     "arabicText": "اَلتَّأَنِّيْ مِنَ اللَّهِ وَالْعَجَلَةُ مِنَ الشَّيْطَانِ",
+    "latinText": "At-ta'annii minallaahi wal 'ajalatu minasy syaithaan",
     "translation": "Tenang itu datangnya dari Allah dan tergesa-gesa itu datangnya dari setan. (HR. Tirmidzi)"
   },
   {
@@ -180,6 +200,7 @@
     "title": "Amalan Utama",
     "category": "hadis",
     "arabicText": "أَفْضَلُ الْأَعْمَالِ، اَلصَّلَاةُ عَلَى وَقْتِهَا وَبِرُّ الْوَالِدَيْنِ",
+    "latinText": "Afdhalul a'maali, ash-shalaatu 'alaa waqtihaa wa birrul waalidain",
     "translation": "Amalan yang paling utama adalah shalat tepat waktu dan berbakti kepada kedua orang tua. (HR. Muttafaqun 'Alaih)"
   },
   {
@@ -187,6 +208,7 @@
     "title": "Tebar Salam",
     "category": "hadis",
     "arabicText": "أَفْشُوا السَّلَامَ بَيْنَكُمْ تَحَابُّوْا",
+    "latinText": "Afsyus salaama bainakum tahaabbuu",
     "translation": "Tebarkanlah salam di antara kalian, niscaya kalian saling menyayangi. (HR. Muslim)"
   },
   {
@@ -194,6 +216,7 @@
     "title": "Larangan Berbisik",
     "category": "hadis",
     "arabicText": "إِذَا كَانُوا ثَلَاثَةً فَلَا يَتَنَاجَى اثْنَانِ دُوْنَ الثَّالِثِ",
+    "latinText": "Idzaa kaanuu tsalaatsatan falaa yatanaajaa itsnaani duunats tsaalits",
     "translation": "Apabila bertiga, janganlah dua orang berbisik-bisik dengan meninggalkan yang ketiga. (HR. Bukhari dan Muslim)"
   }
 ]

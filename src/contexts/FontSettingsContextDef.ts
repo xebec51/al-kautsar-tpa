@@ -1,5 +1,14 @@
 import { createContext } from 'react'
 
+export interface FontSizes {
+  titleSize: number
+  arabicSize: number
+  latinSize: number
+  meaningSize: number
+}
+
+export type FontSizeField = keyof FontSizes
+
 export interface FontSettings {
   titleSize: number
   arabicSize: number
@@ -13,6 +22,9 @@ export interface FontSettings {
   decreaseLatinSize: () => void
   increaseMeaningSize: () => void
   decreaseMeaningSize: () => void
+  getItemSizes: (itemKey: string) => FontSizes
+  increaseItemSize: (itemKey: string, field: FontSizeField) => void
+  decreaseItemSize: (itemKey: string, field: FontSizeField) => void
 }
 
 export const TITLE_STEP = 4

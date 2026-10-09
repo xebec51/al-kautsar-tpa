@@ -27,6 +27,7 @@ export function PrayerDetailPage() {
 
   return (
     <DetailPageLayout
+      settingsKey={`prayer:${prayer.id}`}
       title={prayer.title}
       position={{ current: currentIndex + 1, total: prayers.length }}
       arabicText={prayer.arabicText}

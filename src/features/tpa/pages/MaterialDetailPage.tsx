@@ -30,6 +30,7 @@ export function MaterialDetailPage() {
 
   return (
     <DetailPageLayout
+      settingsKey={`material:${material.id}`}
       title={material.title}
       position={{ current: currentIndex + 1, total: materialList.length }}
       arabicText={material.arabicText}

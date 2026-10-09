@@ -81,24 +81,13 @@ function SettingsRow({ label, value, decId, incId, onDecrease, onIncrease }: Set
 }
 
 interface FontSettingsModalProps {
+  settingsKey: string
   onClose: () => void
 }
 
-export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
-  const {
-    titleSize,
-    arabicSize,
-    latinSize,
-    meaningSize,
-    increaseTitleSize,
-    decreaseTitleSize,
-    increaseArabicSize,
-    decreaseArabicSize,
-    increaseLatinSize,
-    decreaseLatinSize,
-    increaseMeaningSize,
-    decreaseMeaningSize,
-  } = useFontSettings()
+export function FontSettingsModal({ settingsKey, onClose }: FontSettingsModalProps) {
+  const { getItemSizes, increaseItemSize, decreaseItemSize } = useFontSettings()
+  const { titleSize, arabicSize, latinSize, meaningSize } = getItemSizes(settingsKey)
 
   const closeBtn = useFocusable<HTMLButtonElement>('font-modal-close')
 
@@ -175,32 +164,32 @@ export function FontSettingsModal({ onClose }: FontSettingsModalProps) {
             value={arabicSize}
             decId="font-modal-arabic-dec"
             incId="font-modal-arabic-inc"
-            onDecrease={decreaseArabicSize}
-            onIncrease={increaseArabicSize}
+            onDecrease={() => decreaseItemSize(settingsKey, 'arabicSize')}
+            onIncrease={() => increaseItemSize(settingsKey, 'arabicSize')}
           />
           <SettingsRow
             label="Latin"
             value={latinSize}
             decId="font-modal-latin-dec"
             incId="font-modal-latin-inc"
-            onDecrease={decreaseLatinSize}
-            onIncrease={increaseLatinSize}
+            onDecrease={() => decreaseItemSize(settingsKey, 'latinSize')}
+            onIncrease={() => increaseItemSize(settingsKey, 'latinSize')}
           />
           <SettingsRow
             label="Terjemahan"
             value={meaningSize}
             decId="font-modal-meaning-dec"
             incId="font-modal-meaning-inc"
-            onDecrease={decreaseMeaningSize}
-            onIncrease={increaseMeaningSize}
+            onDecrease={() => decreaseItemSize(settingsKey, 'meaningSize')}
+            onIncrease={() => increaseItemSize(settingsKey, 'meaningSize')}
           />
           <SettingsRow
             label="Judul Halaman"
             value={titleSize}
             decId="font-modal-title-dec"
             incId="font-modal-title-inc"
-            onDecrease={decreaseTitleSize}
-            onIncrease={increaseTitleSize}
+            onDecrease={() => decreaseItemSize(settingsKey, 'titleSize')}
+            onIncrease={() => increaseItemSize(settingsKey, 'titleSize')}
           />
         </div>
 
